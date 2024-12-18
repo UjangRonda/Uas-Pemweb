@@ -58,9 +58,6 @@ session_start();
             <a class="nav-link" href="video.php">Video Games</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="remot.php">Remot Control</a>
-          </li>
-          <li class="nav-item">
             <a class="nav-link" href="contact.php">Contact Us</a>
           </li>
           <li class="nav-item">
