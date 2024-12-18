@@ -91,8 +91,7 @@ session_start();
             <div class="row">
               <div class="col-md-6">
                 <h1 class="video_text">Video games</h1>
-                <h1 class="controller_text">controller</h1>
-                <p class="banner_text">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable</p>
+                <p class="banner_text">Play Verse, toko video game terpercaya yang menghadirkan keseruan, inovasi, dan kualitas dalam setiap produknya. Play Verse menawarkan berbagai pilihan gamepad, aksesoris gaming, dan koleksi video game terbaru dari berbagai genre, dirancang untuk memenuhi kebutuhan dan selera para gamer.</p>
                 <div class="shop_bt"><a href="#">Shop Now</a></div>
               </div>
               <div class="col-md-6">
@@ -104,12 +103,11 @@ session_start();
             <div class="row">
               <div class="col-md-6">
                 <h1 class="video_text">Video games</h1>
-                <h1 class="controller_text">controller</h1>
-                <p class="banner_text">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable</p>
+                <p class="banner_text">Play Verse fokus pada kenyamanan dan performa, Play Verse juga menghadirkan produk-produk berkualitas tinggi yang cocok untuk semua kalangan, mulai dari casual gamer hingga profesional. Temukan pengalaman gaming terbaik bersama kami dan jadikan Play Verse sebagai destinasi utama untuk melengkapi perjalanan gaming Anda.</p>
                 <div class="shop_bt"><a href="#">Shop Now</a></div>
               </div>
               <div class="col-md-6">
-                <div class="image_1"><img src="images/img-1.png"></div>
+                <div class="image_1"><img src="images/img-2.png"></div>
               </div>
             </div>
           </div>
@@ -117,12 +115,11 @@ session_start();
             <div class="row">
               <div class="col-md-6">
                 <h1 class="video_text">Video games</h1>
-                <h1 class="controller_text">controller</h1>
-                <p class="banner_text">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable</p>
+                <p class="banner_text">Selain menyediakan produk unggulan, Play Verse juga berkomitmen untuk memberikan layanan pelanggan yang ramah dan responsif. Dengan dukungan komunitas yang terus berkembang, Play Verse ingin menciptakan ruang bagi para gamer untuk berbagi semangat, pengalaman, dan passion mereka. Mari bersama-sama menjadikan dunia gaming lebih seru dengan Play Verse!</p>
                 <div class="shop_bt"><a href="#">Shop Now</a></div>
               </div>
               <div class="col-md-6">
-                <div class="image_1"><img src="images/img-1.png"></div>
+                <div class="image_1"><img src="images/img-3.png"></div>
               </div>
             </div>
           </div>

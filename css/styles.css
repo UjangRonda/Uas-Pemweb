@@ -225,7 +225,7 @@ button {
 }
 
 .logo {
-    width: 35%;
+    width: 45%;
     float: left;
 }
 
@@ -240,7 +240,6 @@ button {
 
 .navbar-expand-lg .navbar-nav .nav-link {
     padding-right: 8px;
-    
     font-size: 14px;
 }
 
@@ -291,10 +290,9 @@ button {
 .video_text{
     width: 100%;
     float: left;
-    font-size: 50px;
-    color: #fefeff;
+    font-size: 70px;
+    color: #000000;
     font-weight: 600;
-    text-transform: uppercase;
 
 }
 .controller_text {
@@ -310,10 +308,10 @@ button {
     width: 100%;
     float: left;
     font-size: 16px;
-    color: #fefeff;
+    color: #000000;
     font-weight: 500;
     margin-left: 0px;
-    padding-top: 50px;
+    padding-top: 30px;
 }
 
 .shop_bt {
@@ -321,22 +319,24 @@ button {
     float: left;
     font-size: 18px;
     text-align: center;
-    background-color: #fcfcfd;
-    color: #191919;
-    border-left: 10px solid #599ee9;
+    background-image: linear-gradient(to right, #7325ee, #3371e2, #00c2cb);
+    color: #fff; 
+    border: none;
     border-radius: 30px;
-    border-right: 10px solid #599ee9;
-    border-top: 4px solid #599ee9;
-    border-bottom: 4px solid #599ee9;
-    padding: 5px 0px;
+    padding: 10px 0; 
     margin-top: 40px;
+    cursor: pointer; 
+    transition: background-image 0.3s ease, transform 0.3s ease; 
 }
 
-.shop_bt a{
-    color: #191919;
+.shop_bt:hover {
+    background-image: linear-gradient(to right, #00c2cb, #3371e2, #7325ee); 
+    transform: scale(1.03);
 }
-.shop_bt a:hover{
-    color: #599ee9;
+
+
+.shop_bt a{
+    color: #ffffff;
 }
 
 #my_slider a.carousel-control-prev {
@@ -392,7 +392,6 @@ button {
     font-size: 50px;
     color: #2d343e;
     font-weight: 600;
-    text-transform: uppercase;
     text-align: right;
 }
 
@@ -405,27 +404,30 @@ button {
     text-align: right;
 }
 
+
 .shop_bt_2 {
     width: 35%;
     float: right;
     font-size: 18px;
     text-align: center;
-    background-color: #fcfcfd;
-    color: #191919;
-    border-left: 10px solid #599ee9;
+    background-image: linear-gradient(to right, #7325ee, #3371e2, #00c2cb);
+    color: #fff; 
+    border: none;
     border-radius: 30px;
-    border-right: 10px solid #599ee9;
-    border-top: 4px solid #599ee9;
-    border-bottom: 4px solid #599ee9;
-    padding: 5px 0px;
+    padding: 10px 0; 
     margin-top: 40px;
+    cursor: pointer; 
+    transition: background-image 0.3s ease, transform 0.3s ease; 
 }
 
-.shop_bt_2 a{
-    color: #191919;
+.shop_bt_2:hover {
+    background-image: linear-gradient(to right, #00c2cb, #3371e2, #7325ee); 
+    transform: scale(1.03);
 }
-.shop_bt_2 a:hover{
-    color: #599ee9;
+
+
+.shop_bt_2 a{
+    color: #ffffff;
 }
 
 .product_section{
