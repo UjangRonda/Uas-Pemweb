@@ -225,33 +225,52 @@ button {
 }
 
 .logo {
-    width: 18%;
+    width: 35%;
     float: left;
 }
+
+
 .navbar {
-    padding: 20px 30px;
+    padding: 10px 50px; 
 }
+
+.navbar-collapse {
+    justify-content: flex-end; 
+}
+
 .navbar-expand-lg .navbar-nav .nav-link {
-    padding-right: 10px;
-    padding-left: 10px;
-    font-size: 18px;
+    padding-right: 8px;
+    
+    font-size: 14px;
 }
+
 .bg-light {
     background-color: #fefeff !important;
     box-shadow: 0px 0px 10px 0px;
-    border-top: 45px solid #333a44;
+    border-top: 20px solid #333a44; 
 }
+
 .navbar-light .navbar-nav .nav-link {
     color: #24292f;
     font-weight: 500;
 }
-.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
+
+.navbar-light .navbar-nav .nav-link:focus, 
+.navbar-light .navbar-nav .nav-link:hover {
     color: #4f99e5;
 }
 
-.navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link {
+.navbar-light .navbar-nav .active > .nav-link, 
+.navbar-light .navbar-nav .nav-link.active, 
+.navbar-light .navbar-nav .nav-link.show, 
+.navbar-light .navbar-nav .show > .nav-link {
     color: #4f99e5;
 }
+
+.navbar-toggler {
+    padding: 5px 10px;
+}
+
 
 .banner_section {
     width: 100%;
