@@ -139,11 +139,11 @@ session_start();
     <div class="container">
       <div class="row">
         <div class="col-md-6">
-          <div class="image_2"><img src="images/img-2.png"></div>
+          <div class="image_2"><img src="images/img-4.png"></div>
         </div>
         <div class="col-md-6">
-          <h1 class="about_text">ABOUT</h1>
-          <p class="lorem_text">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable</p>
+          <h1 class="about_text">About</h1>
+          <p class="lorem_text"><b>Play Verse meiliki misi untuk membangun kreativitas dan teknologi dalam dunia gaming. Play Verse ingin memberi para gamer akses ke produk berkualitas yang mendukung pengembangan keterampilan, kreativitas, dan inovasi dalam setiap permainan.</b></p>
           <div class="shop_bt_2"><a href="#">Shop Now</a></div>
         </div>
       </div>
@@ -151,32 +151,46 @@ session_start();
   </div>
   <!-- about section end -->
   <!-- product section start -->
-  <div class="product_section layout_padding">
-    <div class="container">
-      <div class="product_text">Our <span style="color: #5ca0e9;">products</span></div>
-      <p class="long_text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem</p>
-      <div class="product_section_2">
-        <div class="row">
-          <div class="col-md-6">
-            <div class="image_2"><img src="images/img-3.png"></div>
-            <div class="price_text">Price $ <span style="color: #3a3a38;">200</span></div>
-            <h1 class="game_text">Video Game</h1>
-            <p class="long_text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem</p>
+<div class="product_section layout_padding">
+  <div class="container">
+    <div class="product_text">Our Products</div>
+    <p class="long_text1"><b>Play Verse menyediakan berbagai produk gaming berkualitas, termasuk gamepad, aksesoris gaming seperti headset, mouse, dan keyboard, serta video game terbaru. Semua produk kami dirancang untuk memberikan pengalaman bermain yang optimal dan menyenangkan.</b></p>
+    <div class="product_section_2">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="product_card">
+            <div class="image_2"><img src="images/produk1.jpg"></div>
+            <div class="price_text">Price Rp <span style="color: #3371e2;">16.469.827</span></div>
+            <h1 class="game_text">Microsoft Xbox Series X</h1>
+            <p class="long_text">Xbox Series X adalah konsol game generasi terbaru dari Microsoft yang menawarkan performa luar biasa dengan grafis 4K dan frame rate hingga 120 FPS. Ditenagai oleh prosesor custom, SSD super cepat, dan dukungan ray tracing.</p>
           </div>
-          <div class="col-md-6">
-            <div class="image_2"><img src="images/img-3.png"></div>
-            <div class="price_text">Price $ <span style="color: #3a3a38;">300</span></div>
-            <h1 class="game_text">Video Game</h1>
-            <p class="long_text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem</p>
+        </div>
+        <div class="col-md-4">
+          <div class="product_card">
+            <div class="image_2"><img src="images/produk2.png"></div>
+            <div class="price_text">Price Rp <span style="color: #3371e2;">599.000</span></div>
+            <h1 class="game_text">The Witcher 3: Wild Hunt</h1>
+            <p class="long_text">Sebagai Geralt of Rivia, pemain berpetualang di dunia terbuka yang luas, memecahkan misteri, bertarung dengan monster, dan memilih keputusan moral yang memengaruhi alur cerita. Game RPG ini menawarkan grafis memukau dan gameplay mendalam.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="product_card">
+            <div class="image_2"><img src="images/produk3.png"></div>
+            <div class="price_text">Price Rp <span style="color: #3371e2;">699.000</span></div>
+            <h1 class="game_text">Call of Duty: Modern Warfare</h1>
+            <p class="long_text">S Game tembak-menembak aksi dengan grafis realistis dan mode multiplayer intens. Game ini memiliki kampanye pemain tunggal yang mendalam serta mode battle royale yang seru.</p>
           </div>
         </div>
       </div>
-      <div class="see_main">
-        <div class="see_bt"><a href="#">See More</a></div>
-      </div>
+    </div>
+    <div class="see_main">
+      <div class="see_bt"><a href="#">See More</a></div>
     </div>
   </div>
-  <!-- product section end -->
+</div>
+<!-- product section end -->
+
+
   <!-- video section start -->
   <div class="video_section layout_padding">
     <div class="container">
