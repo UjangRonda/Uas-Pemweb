@@ -16,25 +16,55 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
 </head>
 <body>
+  <!-- header section start -->
   <div class="header_section">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="logo"><a href="index.php"><img src="images/logo.png"></a></div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+      <div class="logo"><a href="index.php"><img src="images/logo nav.png"></a></div>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item"><a class="nav-link" href="index.php">HOME</a></li>
-          <li class="nav-item"><a class="nav-link" href="about.php">ABOUT</a></li>
-          <li class="nav-item"><a class="nav-link" href="product.php">OUR PRODUCTS</a></li>
-          <li class="nav-item"><a class="nav-link" href="video.php">VIDEO GAMES</a></li>
-          <li class="nav-item"><a class="nav-link" href="remot.php">REMOT CONTROL</a></li>
-          <li class="nav-item"><a class="nav-link" href="contact.php">CONTACT US</a></li>
-          <li class="nav-item active"><a class="nav-link" href="login.php">LOGIN</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.php">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.php">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="product.php">Our Products</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="video.php">Video Games</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="remot.php">Remot Control</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.php">Contact Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><img src="images/search-icon.png"></a>
+            <?php if (!isset($_SESSION['username'])): ?>
+          <li class="nav-item active">
+            <a class="nav-link" href="login.php">SIGN IN</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="register.php">REGISTER</a>
+          </li>
+        <?php else: ?>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Welcome, <?php echo htmlspecialchars($_SESSION['username']); ?></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="logout.php">LOGOUT</a>
+          </li>
+        <?php endif; ?>
         </ul>
       </div>
     </nav>
   </div>
+  <!-- header section end -->
   <div class="login_section layout_padding">
     <div class="container">
       <div class="login_text">Login to Your <span style="color: #5ca0e9;">Account</span></div>
