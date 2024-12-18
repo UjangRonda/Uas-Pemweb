@@ -92,7 +92,7 @@ session_start();
               <div class="col-md-6">
                 <h1 class="video_text">Video games</h1>
                 <p class="banner_text">Play Verse, toko video game terpercaya yang menghadirkan keseruan, inovasi, dan kualitas dalam setiap produknya. Play Verse menawarkan berbagai pilihan gamepad, aksesoris gaming, dan koleksi video game terbaru dari berbagai genre, dirancang untuk memenuhi kebutuhan dan selera para gamer.</p>
-                <div class="shop_bt"><a href="#">Shop Now</a></div>
+                <div class="shop_bt"><a href="product.php">Shop Now</a></div>
               </div>
               <div class="col-md-6">
                 <div class="image_1"><img src="images/img-1.png"></div>
@@ -184,7 +184,7 @@ session_start();
       </div>
     </div>
     <div class="see_main">
-      <div class="see_bt"><a href="#">See More</a></div>
+      <div class="see_bt"><a href="product.php">See More</a></div>
     </div>
   </div>
 </div>
@@ -196,13 +196,13 @@ session_start();
     <div class="container">
       <div class="row">
         <div class="col-md-6">
-          <h1 class="video_text_2">3d video game</h1>
-          <h1 class="controller_text_2">remoto control</h1>
-          <p class="banner_text_2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud</p>
-          <div class="shop_bt"><a href="#">Shop Now</a></div>
+          <h1 class="video_text_2">3D Video game</h1>
+          <h1 class="controller_text_2">Remoto control</h1>
+          <p class="banner_text_2">Play Verse menawarkan 3D Video Games dan Remote-Controlled Gaming Devices yang dirancang untuk menghadirkan pengalaman bermain yang realistis dan interaktif. Teknologi 3D Play Verse memungkinkan pemain merasakan dunia game dengan visual yang hidup dan efek mendalam, memberikan sensasi bermain yang tak tertandingi.</p>
+          <div class="shop_bt"><a href="product.php">Shop Now</a></div>
         </div>
         <div class="col-md-6">
-          <div class="image_4"><img src="images/img-4.png"></div>
+          <div class="image_4"><img src="images/img-5.png"></div>
         </div>
       </div>
     </div>
@@ -211,25 +211,22 @@ session_start();
   <!-- testimonial section start -->
   <div class="testimonial_section layout_padding">
     <div class="container">
-      <h1 class="testimonial_text">Testimonial</h1>
-      <p class="ipsum_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud</p>
+      <h1 class="testimonial_text">Testimoni</h1>
+      <p class="ipsum_text"><b>"Play Verse adalah toko game terpercaya dengan koleksi terbaik dan layanan memuaskan. Banyak pelanggan memberikan ulasan positif atas kualitas produk kami, menjadikan Play Verse pilihan utama bagi para gamer."</b></p>
       <div class="testimonial_section_2">
         <div class="box_main">
           <div class="quote_icon"><img src="images/quote-icon.png"></div>
-          <p class="dolor_text"> dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum </p>
+          <p class="dolor_text"><b> "Belanja di Play Verse adalah keputusan terbaik saya sebagai gamer. Game 3D dan perangkatnya sangat inovatif, memberikan sensasi bermain yang mendalam. Stafnya ramah, dan pengiriman tepat waktu!</b></p>
           <div class="client_main">
             <div class="client_left">
               <div class="images_5"><img src="images/img-5.png"></div>
             </div>
             <div class="client_right">
-              <h1 class="sandy_text">Sandy Delex</h1>
+              <h1 class="sandy_text">Adik Nur Halimah</h1>
               <p class="sandy_text_1">Reprehenderit</p>
             </div>
           </div>
         </div>
-      </div>
-      <div class="see_main">
-        <div class="see_bt"><a href="#">See More</a></div>
       </div>
     </div>
   </div>
@@ -257,12 +254,12 @@ session_start();
                   </div>
                 </form>
               </div>
-              <div class="main_bt"><a href="#">SEND</a></div>
+              <div class="main_bt"><a href="#">Send Message</a></div>
             </div>
           </div>
         </div>
         <div class="col-md-6">
-          <div class="image_6"><img src="images/img-6.png"></div>
+          <div class="image_6"><img src="images/email.png"></div>
         </div>
       </div>
     </div>

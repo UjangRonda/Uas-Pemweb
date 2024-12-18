@@ -555,9 +555,8 @@ button {
     width: 100%;
     float: left;
     font-size: 50px;
-    color: #599ee9;
+    color: #ffffff;
     font-weight: 600;
-    text-transform: uppercase;
 
 }
 .controller_text_2 {
@@ -566,7 +565,6 @@ button {
     font-size: 58px;
     color: #fefeff;
     font-weight: 600;
-    text-transform: uppercase;
     line-height: 50px;
 }
 .banner_text_2 {
@@ -590,7 +588,6 @@ button {
     font-weight: bold;
     text-align: center;
     color: #191919;
-    text-transform: uppercase;
 }
 
 .ipsum_text{
@@ -611,7 +608,7 @@ button {
     width: 75%;
     margin: 0 auto;
     text-align: center;
-    border: 2px solid #424242;
+    border: 3px solid #3371e2;
     padding: 40px;
     border-radius: 20px;
     display: flow-root;
@@ -679,7 +676,7 @@ button {
 .contact_section{
     width: 100%;
     float: left;
-    background-color: #f2f7fd;
+    background-color: #ffffff;
     height: auto;
     padding-bottom: 90px;
     margin-top: 90px;
@@ -708,7 +705,7 @@ button {
     padding: 20px 20px 0px 0px;
     background: transparent;
     border: 0px;
-    border-bottom: 1px solid #888686;
+    border-bottom: 1px solid #000000;
 }
 
 .massage-bt {
@@ -719,7 +716,7 @@ button {
     padding: 36px 20px 10px 0px;
     background: transparent;
     border: 0px;
-    border-bottom: 1px solid #888686;
+    border-bottom: 1px solid #000000;
 }
 
 .send_btn {
@@ -733,7 +730,7 @@ button {
     background: #ed1c24;
     border: none;
     color: #faf9f9;
-    width: 160px;
+    width: auto;
     height: 58px;
     font-size: 24px;
     padding-top: 3px;
@@ -748,7 +745,7 @@ button {
 }
 
 .main_bt a:hover{
-    color: #000;
+    color: #fec108;
 }
 
 .ipsum_text_2 {
