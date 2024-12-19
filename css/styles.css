@@ -574,7 +574,6 @@ button {
     color: #000000;
     font-weight: 500;
     margin-left: 0px;
-    padding-top: 50px;
 }
 
 .testimonial_section{
@@ -790,7 +789,7 @@ button {
     float: left;
     font-size: 16pt;
     color: #eceaea;
-    background-color: #599ee9;
+    background-color: #7325ee
     padding: 5px 0px;
     border: 0px;
     text-align: center;
