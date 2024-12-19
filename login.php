@@ -1,12 +1,5 @@
 <?php
-session_start();
-
-if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true) {
-    $redirect = isset($_SESSION['redirect_url']) ? $_SESSION['redirect_url'] : 'index.php';
-    unset($_SESSION['redirect_url']); 
-    header("Location: " . $redirect);
-    exit();
-}
+  session_start();
 ?>
 
 <!DOCTYPE html>

@@ -34,7 +34,7 @@
 
 <body>
 <?php
-session_start();
+  session_start();
 ?>
   <!-- header section start -->
   <div class="header_section">

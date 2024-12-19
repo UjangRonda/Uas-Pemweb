@@ -5,7 +5,7 @@ require "koneksi.php";
 if (isset($_SESSION['user_id'])) {
     $user_id = $_SESSION['user_id']; 
 } else {
-    echo "Anda harus login terlebih dahulu.";
+    echo "<script> alert ('Anda harus login terlebih dahulu') </script>";
     exit();
 }
 
@@ -20,11 +20,11 @@ $status = 1;
 $stmt->bind_param("iissi", $user_id, $product_id, $shipping_address, $transaction_date, $status);
 
 if ($stmt->execute()) {
-    echo "Transaksi berhasil.";
-    header("Location: transaction_success.php");
+    $transaction_id = $stmt->insert_id;
+    header("Location: transaction_success.php?id=" . $transaction_id);
     exit();
 } else {
-    echo "Gagal menyimpan transaksi.";
+    echo "<script> alert ('Gagal menyimpan transaksi') </script>";
 }
 
 ?>
