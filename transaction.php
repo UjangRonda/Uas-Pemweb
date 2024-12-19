@@ -1,13 +1,6 @@
 <?php 
     session_start();
     include 'koneksi.php';
-    
-    if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true || !isset($_SESSION['id'])) {
-        $_SESSION['redirect_url'] = $_SERVER['REQUEST_URI'];
-        header("Location: login.php");
-        exit();
-    }
-
 
     $product_id = isset($_GET['product_id']) ? (int)$_GET['product_id'] : 0;
     
@@ -62,18 +55,13 @@
         <div class="product-summary">
             <h3>Product: <?php echo htmlspecialchars($product['name']); ?></h3>
             <p>Price: $<?php echo htmlspecialchars($product['price']); ?></p>
-            <p>Logged in as: <?php echo $_SESSION['username']; ?> (ID: <?php echo $_SESSION['id']; ?>)</p>
+            <p>Customer: <?php echo $_SESSION['username']; ?></p>
         </div>
 
         <form action="transaction_process.php" method="POST">
             <input type="hidden" name="product_id" value="<?php echo $product_id; ?>">
-            <input type="hidden" name="user_id" value="<?php echo $_SESSION['id']; ?>">
-            
-            <div class="form-group">
-                <label>Shipping Address</label>
-                <textarea name="shipping_address" class="form-control" required></textarea>
-            </div>
-
+            <label for="shipping_address">Shipping Address:</label>
+            <textarea name="shipping_address" id="shipping_address" required></textarea>
             <button type="submit" class="btn btn-primary">Confirm Purchase</button>
         </form>
     </div>
