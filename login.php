@@ -1,3 +1,14 @@
+<?php
+session_start();
+
+if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true) {
+    $redirect = isset($_SESSION['redirect_url']) ? $_SESSION['redirect_url'] : 'index.php';
+    unset($_SESSION['redirect_url']); 
+    header("Location: " . $redirect);
+    exit();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -42,7 +53,7 @@
             <a class="nav-link" href="contact.php">Contact Us</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#"><img src="images/search-icon.png"></a>
+            <!-- <a class="nav-link" href="#"><img src="images/search-icon.png"></a> -->
             <?php if (!isset($_SESSION['username'])): ?>
           <li class="nav-item active">
             <a class="nav-link" href="login.php">SIGN IN</a>

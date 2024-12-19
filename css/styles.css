@@ -325,6 +325,7 @@ button {
     border-radius: 30px;
     padding: 10px 0; 
     margin-top: 40px;
+    margin-bottom: 100px;
     cursor: pointer; 
     transition: background-image 0.3s ease, transform 0.3s ease; 
 }
@@ -500,12 +501,12 @@ button {
     text-align: center;
 }
   
-.long_text1{
+.long_text{
     width: 90%;
     float: left;
     font-size: 16px;
     color: #000000;
-    margin-left: 15px;
+    margin-left: 50px;
     text-align: center;
 }
 
@@ -516,6 +517,7 @@ button {
     align-items: center; 
     text-align: center;
     margin-top: 40px; 
+    margin-bottom: 50px;
 }
 
 .see_bt {
@@ -789,7 +791,7 @@ button {
     float: left;
     font-size: 16pt;
     color: #eceaea;
-    background-color: #7325ee
+    background-color: #7325ee;
     padding: 5px 0px;
     border: 0px;
     text-align: center;

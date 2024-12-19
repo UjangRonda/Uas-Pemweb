@@ -90,7 +90,7 @@
         <div class="col-md-6">
           <h1 class="about_text">About</h1>
           <p class="lorem_text"><b>Play Verse meiliki misi untuk membangun kreativitas dan teknologi dalam dunia gaming. Play Verse ingin memberi para gamer akses ke produk berkualitas yang mendukung pengembangan keterampilan, kreativitas, dan inovasi dalam setiap permainan.</b></p>
-          <div class="shop_bt_2"><a href="#">Shop Now</a></div>
+          <div class="shop_bt_2"><a href="product.php">Shop Now</a></div>
         </div>
       </div>
     </div>

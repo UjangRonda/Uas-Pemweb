@@ -35,6 +35,9 @@
 <body>
 <?php
 session_start();
+echo "<pre>";
+print_r($_SESSION);
+echo "</pre>";
 ?>
   <!-- header section start -->
   <div class="header_section">
@@ -104,7 +107,7 @@ session_start();
               <div class="col-md-6">
                 <h1 class="video_text">Video games</h1>
                 <p class="banner_text">Play Verse fokus pada kenyamanan dan performa, Play Verse juga menghadirkan produk-produk berkualitas tinggi yang cocok untuk semua kalangan, mulai dari casual gamer hingga profesional. Temukan pengalaman gaming terbaik bersama kami dan jadikan Play Verse sebagai destinasi utama untuk melengkapi perjalanan gaming Anda.</p>
-                <div class="shop_bt"><a href="#">Shop Now</a></div>
+                <div class="shop_bt"><a href="product.php">Shop Now</a></div>
               </div>
               <div class="col-md-6">
                 <div class="image_1"><img src="images/img-2.png"></div>
@@ -116,7 +119,7 @@ session_start();
               <div class="col-md-6">
                 <h1 class="video_text">Video games</h1>
                 <p class="banner_text">Selain menyediakan produk unggulan, Play Verse juga berkomitmen untuk memberikan layanan pelanggan yang ramah dan responsif. Dengan dukungan komunitas yang terus berkembang, Play Verse ingin menciptakan ruang bagi para gamer untuk berbagi semangat, pengalaman, dan passion mereka. Mari bersama-sama menjadikan dunia gaming lebih seru dengan Play Verse!</p>
-                <div class="shop_bt"><a href="#">Shop Now</a></div>
+                <div class="shop_bt"><a href="product.php">Shop Now</a></div>
               </div>
               <div class="col-md-6">
                 <div class="image_1"><img src="images/img-3.png"></div>
@@ -144,7 +147,7 @@ session_start();
         <div class="col-md-6">
           <h1 class="about_text">About</h1>
           <p class="lorem_text"><b>Play Verse meiliki misi untuk membangun kreativitas dan teknologi dalam dunia gaming. Play Verse ingin memberi para gamer akses ke produk berkualitas yang mendukung pengembangan keterampilan, kreativitas, dan inovasi dalam setiap permainan.</b></p>
-          <div class="shop_bt_2"><a href="#">Shop Now</a></div>
+          <div class="shop_bt_2"><a href="product.php">Shop Now</a></div>
         </div>
       </div>
     </div>

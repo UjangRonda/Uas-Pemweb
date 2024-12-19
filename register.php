@@ -57,7 +57,7 @@
             <a class="nav-link" href="contact.php">Contact Us</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#"><img src="images/search-icon.png"></a>
+            <!-- <a class="nav-link" href="#"><img src="images/search-icon.png"></a> -->
             <?php if (!isset($_SESSION['username'])): ?>
           <li class="nav-item active">
             <a class="nav-link" href="login.php">SIGN IN</a>

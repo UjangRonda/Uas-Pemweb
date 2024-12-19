@@ -81,17 +81,17 @@
   </div>
   <!-- header section end -->
   <!-- video section start -->
-  <div class="video_section layout_padding padding_video_0">
+  <div class="video_section layout_padding">
     <div class="container">
       <div class="row">
         <div class="col-md-6">
-          <h1 class="video_text_2">3d video game</h1>
-          <h1 class="controller_text_2">remoto control</h1>
-          <p class="banner_text_2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud</p>
-          <div class="shop_bt"><a href="#">Shop Now</a></div>
+          <h1 class="video_text_2">3D Video game</h1>
+          <h1 class="controller_text_2">Remoto control</h1>
+          <p class="banner_text_2">Play Verse menawarkan 3D Video Games dan Remote-Controlled Gaming Devices yang dirancang untuk menghadirkan pengalaman bermain yang realistis dan interaktif. Teknologi 3D Play Verse memungkinkan pemain merasakan dunia game dengan visual yang hidup dan efek mendalam, memberikan sensasi bermain yang tak tertandingi.</p>
+          <div class="shop_bt"><a href="product.php">Shop Now</a></div>
         </div>
         <div class="col-md-6">
-          <div class="image_4"><img src="images/img-4.png"></div>
+          <div class="image_4"><img src="images/img-5.png"></div>
         </div>
       </div>
     </div>
