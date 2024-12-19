@@ -11,10 +11,10 @@
   <link rel="icon" href="images/fevicon.png" type="image/gif" />
   <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
   <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
-  <link rel="stylesheet" href="css/style-login.css">
   <link rel="stylesheet" href="css/owl.theme.default.min.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+  <link rel="stylesheet" href="css/style-login.css">
 </head>
 <body>
   <!-- header section start -->
@@ -70,25 +70,25 @@
       <div class="login_section_2">
         <form action="login_process.php" method="POST">
           <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-12">
               <label for="username">Username</label>
               <input type="text" class="form-control" id="username" name="username" required>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-12">
               <label for="password">Password</label>
               <input type="password" class="form-control" id="password" name="password" required>
             </div>
             <div class="col-md-12">
-              <button type="submit" class="btn btn-primary">Login</button>
-            </div>
-            <div class="col-md-12">
-              <a href="index.php" class="btn btn-secondary mt-12">kembali</a>
+              <div class="button-container">
+                  <a href="index.php" class="btn btn-secondary">Kembali</a>
+                  <button type="submit" class="btn btn-primary">Login</button>
+              </div>
             </div>
           </div>
         </form>
-        <div class="forgot_password">
+        <!-- <div class="forgot_password">
           <a href="forgot_password.php">Forgot Password?</a>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>

@@ -1,51 +1,50 @@
-.login_section .container {
+.register_section .container {
     background-color: #ffffff;
     border-radius: 15px;
     padding: 30px;
     box-shadow: 0 4px 8px rgba(229, 0, 255, 0.1);
-    margin-top: 50px;
     margin-bottom: 50px;
-    max-width: 600px;
+    max-width: 800px;
 }
 
-.login_section .login_text {
+.register_section .register_text {
     font-size: 24px !important;
     margin-bottom: 20px !important;
     font-weight: bold;
     color: #333;
 }
 
-.login_section .long_text {
+.register_section .long_text {
     margin-bottom: 20px !important;
     color: #666;
 }
 
-.login_section_2 form {
+.register_section_2 form {
     margin-top: 30px;
 }
 
-.login_section_2 .form-control {
+.register_section_2 .form-control {
     margin-bottom: 20px;
     border-radius: 8px;
 }
 
-.login_section_2 .button-container {
+.register_section_2 .button-container {
     display: flex;
     justify-content: space-between; 
     margin-top: 20px;
 }
 
 
-.login_section_2 .button-container button[type="submit"] {
-    width: 24%; 
+.register_section_2 .button-container button[type="submit"] {
+    width: 25%; 
     padding: 10px;
-    border-radius: 20px;
+    border-radius: 24px;
     float: right;
 }
 
-.login_section_2 .button-container .btn-secondary {
-    width: 24%;
+.register_section_2 .button-container .btn-secondary {
+    width: 25%;
     padding: 10px;
-    border-radius: 20px;
+    border-radius: 24px;
     float: left;
 }
