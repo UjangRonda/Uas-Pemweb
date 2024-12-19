@@ -15,20 +15,6 @@
         header("Location: index.php");
         exit();
     }
-
-    $query_user = "SELECT id FROM users WHERE username = ?";
-    $statement = $conn->prepare($query_user);
-    $statement->bind_param("i", $_SESSION['username']);
-    $statement->execute();
-
-    $user_id = $statement->get_result();
-
-    if ($user_id->num_rows > 0) {
-        $row = $user_id->fetch_assoc();
-        $user_id = $row['id'];
-    } else {
-        echo "User tidak ditemukan.";
-    }
 ?>
 
 <!DOCTYPE html>
@@ -73,12 +59,9 @@
         </div>
 
         <form action="transaction_process.php" method="POST">
-            <input type="hidden" name="user_id" value="<?php echo $user_id; ?>">
             <input type="hidden" name="product_id" value="<?php echo $product_id; ?>">
-            <div class="form-group">
-                <label>Shipping Address</label>
-                <textarea name="shipping_address" class="form-control" required></textarea>
-            </div>
+            <label for="shipping_address">Shipping Address:</label>
+            <textarea name="shipping_address" id="shipping_address" required></textarea>
             <button type="submit" class="btn btn-primary">Confirm Purchase</button>
         </form>
     </div>

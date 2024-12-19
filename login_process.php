@@ -15,17 +15,30 @@ if (mysqli_num_rows($result_admin) > 0) {
     exit();
 }
 
-$query_user = "SELECT * FROM users WHERE username='$username' AND password='$password'";
-$result_user = mysqli_query($conn, $query_user);
+session_start(); 
+$username = $_POST['username'];
+$password = $_POST['password'];
 
-if (mysqli_num_rows($result_user) > 0) {
-    session_start();
-    $_SESSION['logged_in'] = true;
-    $_SESSION['username'] = $username;
-    $_SESSION['role'] = 'user';
+$query = "SELECT id, username FROM users WHERE username = ? AND password = ?";
+$stmt = $conn->prepare($query);
+$stmt->bind_param("ss", $username, $password);
+$stmt->execute();
+$result = $stmt->get_result();
+
+if ($result->num_rows > 0) {
+    $user = $result->fetch_assoc();
+
+    $_SESSION['user_id'] = $user['id']; 
+    $_SESSION['username'] = $user['username']; 
+
     header("Location: index.php");
     exit();
+} else {
+    echo "Username atau password salah.";
 }
 
+
+header("Location: index.php");
+exit();
 echo "<script>alert('Login gagal! Username atau password salah.'); window.location.href='login.php';</script>";
 ?>

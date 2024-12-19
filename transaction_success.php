@@ -1,10 +1,9 @@
 <?php
 session_start();
-include 'koneksi.php';
+require 'koneksi.php';
 
 $transaction_id = isset($_GET['id']) ? (int)$_GET['id'] : 0;
 
-// Ambil detail transaksi
 $query = "SELECT t.*, p.name as product_name, p.price, u.username 
           FROM transactions t 
           JOIN products p ON t.product_id = p.id 
@@ -21,7 +20,6 @@ if (!$transaction) {
     exit();
 }
 
-// Fungsi untuk menampilkan status
 function getStatus($status) {
     switch($status) {
         case 1:
