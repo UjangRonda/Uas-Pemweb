@@ -82,66 +82,63 @@
     <div class="container">
       <div class="row">
         <div class="col-md-6">
-          <div class="image_2"><img src="images/img-2.png"></div>
+          <div class="image_2"><img src="images/img-4.png"></div>
         </div>
         <div class="col-md-6">
-          <h1 class="about_text">ABOUT</h1>
-          <p class="lorem_text">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable</p>
+          <h1 class="about_text">About</h1>
+          <p class="lorem_text"><b>Play Verse meiliki misi untuk membangun kreativitas dan teknologi dalam dunia gaming. Play Verse ingin memberi para gamer akses ke produk berkualitas yang mendukung pengembangan keterampilan, kreativitas, dan inovasi dalam setiap permainan.</b></p>
           <div class="shop_bt_2"><a href="#">Shop Now</a></div>
         </div>
       </div>
     </div>
   </div>
   <!-- about section end -->
-   <!-- testimonial section start -->
+  <!-- testimonial section start -->
   <div class="testimonial_section layout_padding">
     <div class="container">
-      <h1 class="testimonial_text">Testimonial</h1>
-      <p class="ipsum_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud</p>
+      <h1 class="testimonial_text">Testimoni</h1>
+      <p class="ipsum_text"><b>"Play Verse adalah toko game terpercaya dengan koleksi terbaik dan layanan memuaskan. Banyak pelanggan memberikan ulasan positif atas kualitas produk kami, menjadikan Play Verse pilihan utama bagi para gamer."</b></p>
       <div class="testimonial_section_2">
         <div class="box_main">
           <div class="quote_icon"><img src="images/quote-icon.png"></div>
-          <p class="dolor_text"> dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum </p>
+          <p class="dolor_text"><b> "Belanja di Play Verse adalah keputusan terbaik saya sebagai gamer. Game 3D dan perangkatnya sangat inovatif, memberikan sensasi bermain yang mendalam. Stafnya ramah, dan pengiriman tepat waktu!</b></p>
           <div class="client_main">
             <div class="client_left">
               <div class="images_5"><img src="images/img-5.png"></div>
             </div>
             <div class="client_right">
-              <h1 class="sandy_text">Sandy Delex</h1>
+              <h1 class="sandy_text">Adik Nur Halimah</h1>
               <p class="sandy_text_1">Reprehenderit</p>
             </div>
           </div>
         </div>
-      </div>
-      <div class="see_main">
-        <div class="see_bt"><a href="#">See More</a></div>
       </div>
     </div>
   </div>
   <!-- testimonial section end -->
   <!-- footer section start -->
   <div class="section_footer ">
-      <div class="container"> 
-          <div class="footer_section_2">
-            <div class="row">
-                <div class="col-sm-6 col-md-6 col-lg-3">
-                  <h2 class="account_text">About Us</h2>
-                  <p class="ipsum_text_2">dolor sit amet, consectetur magna aliqua. Ut enim ad minim veniam, quisdotempor incididunt r</p>
-                </div>
-                <div class="col-sm-6 col-md-6 col-lg-3">
-                  <h2 class="account_text">Useful Link</h2>
-                  <div class="useful_link">
-                    <ul>
-                      <li><a href="#">Video games</a></li>
-                      <li><a href="#">Remote control</a></li>
-                      <li><a href="#">3d controller</a></li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="col-sm-6 col-md-6 col-lg-3">
-                <h2 class="account_text">Contact Us</h2>
-                <p class="ipsum_text_2">dolor sit amet, consectetur magna aliqua. quisdotempor incididunt ut e </p>
-                </div>
+    <div class="container">
+      <div class="footer_section_2">
+        <div class="row">
+          <div class="col-sm-6 col-md-6 col-lg-3">
+            <h2 class="account_text">Play Verse</h2>
+            <p class="ipsum_text_2">Rasakan Kendali Penuh dalam Dunia Gaming, Hadirkan Keseruan Tanpa Henti di Setiap Permainan</p>
+          </div>
+          <div class="col-sm-6 col-md-6 col-lg-3">
+            <h2 class="account_text">Useful Link</h2>
+            <div class="useful_link">
+              <ul>
+                <li><a href="product.php">Our Products</a></li>
+                <li><a href="video.php">Video games</a></li>
+                <li><a href="contact.php">Contact Us</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-6 col-lg-3">
+            <h2 class="account_text">Follow Play Verse</h2>
+            <p class="ipsum_text_2">Ikuti Play Verse untuk update terbaru, penawaran menarik, dan nikmati pengalaman gaming yang lebih seru</p>
+          </div>
           <div class="col-sm-6 col-md-6 col-lg-3">
             <h2 class="account_text">Newsletter</h2>
             <input type="" class="email_text" placeholder="Enter Your Email" name="Enter Your Email">
@@ -151,22 +148,22 @@
       </div>
       <div class="social_icon">
         <ul>
-          <li><a href="#"><img src="images/fb-icon.png"></a></li>
-          <li><a href="#"><img src="images/twitter-icon.png"></a></li>
-          <li><a href="#"><img src="images/linkdin-icon.png"></a></li>
-          <li><a href="#"><img src="images/instagram-icon.png"></a></li>
+          <li><a href="https://id-id.facebook.com/login.php/"><img src="images/fb-icon.png"></a></li>
+          <li><a href="https://x.com/login?"><img src="images/twitter-icon.png"></a></li>
+          <li><a href="https://www.linkedin.com/in/adiknurhalimah"><img src="images/linkdin-icon.png"></a></li>
+          <li><a href="instagram.com/aaadiknhh_"><img src="images/instagram-icon.png"></a></li>
         </ul>
       </div>
     </div>
+      <!-- copyright section start -->
+      <div class="copyright_section">
+        <div class="container">
+          <p class="copyright_text">Copyright 2024 All Right Reserved By <a href="#"> Play Verse</p>
+        </div>
+      </div>
+      <!-- copyright section end -->
   </div>
   <!-- footer section end -->
-  <!-- copyright section start -->
-  <div class="copyright_section">
-    <div class="container">
-      <p class="copyright_text">Copyright 2020 All Right Reserved By <a href="https://html.design/"> Free html Templates</p>
-    </div>
-  </div>
-  <!-- copyright section end -->
   <!-- Javascript files-->
     <script src="js/jquery.min.js"></script>
     <script src="js/popper.min.js"></script>

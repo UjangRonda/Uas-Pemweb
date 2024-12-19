@@ -78,35 +78,34 @@
   </div>
   <!-- header section end -->
   <!-- contact section start -->
-  <div class="contact_section layout_padding padding_top_0">
+  <div class="contact_section layout_padding">
     <div class="container">
       <div class="row">
         <div class="col-md-6">
           <div class="email_box">
-                    <div class="input_main">
-                       <div class="container">
-                          <form action="/action_page.php">
-                            <div class="form-group">
-                              <input type="text" class="email-bt" placeholder="Name" name="Name">
-                            </div>
-                            <div class="form-group">
-                              <input type="text" class="email-bt" placeholder="Email" name="Name">
-                            </div>
-                            <div class="form-group">
-                              <input type="text" class="email-bt" placeholder="Phone Numbar" name="Email">
-                            </div>
-                            
-                            <div class="form-group">
-                                <textarea class="massage-bt" placeholder="Massage" rows="5" id="comment" name="Massage"></textarea>
-                            </div>
-                          </form>   
-                       </div> 
-                        <div class="main_bt"><a href="#">SEND</a></div>                  
-                    </div>
-                 </div>
+            <div class="input_main">
+              <div class="container">
+                <form action="/action_page.php">
+                  <div class="form-group">
+                    <input type="text" class="email-bt" placeholder="Name" name="Name">
+                  </div>
+                  <div class="form-group">
+                    <input type="text" class="email-bt" placeholder="Email" name="Name">
+                  </div>
+                  <div class="form-group">
+                    <input type="text" class="email-bt" placeholder="Phone Numbar" name="Email">
+                  </div>
+                  <div class="form-group">
+                    <textarea class="massage-bt" placeholder="Massage" rows="5" id="comment" name="Massage"></textarea>
+                  </div>
+                </form>
+              </div>
+              <div class="main_bt"><a href="#">Send Message</a></div>
+            </div>
+          </div>
         </div>
         <div class="col-md-6">
-          <div class="image_6"><img src="images/img-6.png"></div>
+          <div class="image_6"><img src="images/email.png"></div>
         </div>
       </div>
     </div>
@@ -114,27 +113,27 @@
   <!-- contact section end -->
   <!-- footer section start -->
   <div class="section_footer ">
-      <div class="container"> 
-          <div class="footer_section_2">
-            <div class="row">
-                <div class="col-sm-6 col-md-6 col-lg-3">
-                  <h2 class="account_text">About Us</h2>
-                  <p class="ipsum_text_2">dolor sit amet, consectetur magna aliqua. Ut enim ad minim veniam, quisdotempor incididunt r</p>
-                </div>
-                <div class="col-sm-6 col-md-6 col-lg-3">
-                  <h2 class="account_text">Useful Link</h2>
-                  <div class="useful_link">
-                    <ul>
-                      <li><a href="#">Video games</a></li>
-                      <li><a href="#">Remote control</a></li>
-                      <li><a href="#">3d controller</a></li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="col-sm-6 col-md-6 col-lg-3">
-                <h2 class="account_text">Contact Us</h2>
-                <p class="ipsum_text_2">dolor sit amet, consectetur magna aliqua. quisdotempor incididunt ut e </p>
-                </div>
+    <div class="container">
+      <div class="footer_section_2">
+        <div class="row">
+          <div class="col-sm-6 col-md-6 col-lg-3">
+            <h2 class="account_text">Play Verse</h2>
+            <p class="ipsum_text_2">Rasakan Kendali Penuh dalam Dunia Gaming, Hadirkan Keseruan Tanpa Henti di Setiap Permainan</p>
+          </div>
+          <div class="col-sm-6 col-md-6 col-lg-3">
+            <h2 class="account_text">Useful Link</h2>
+            <div class="useful_link">
+              <ul>
+                <li><a href="product.php">Our Products</a></li>
+                <li><a href="video.php">Video games</a></li>
+                <li><a href="contact.php">Contact Us</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-6 col-lg-3">
+            <h2 class="account_text">Follow Play Verse</h2>
+            <p class="ipsum_text_2">Ikuti Play Verse untuk update terbaru, penawaran menarik, dan nikmati pengalaman gaming yang lebih seru</p>
+          </div>
           <div class="col-sm-6 col-md-6 col-lg-3">
             <h2 class="account_text">Newsletter</h2>
             <input type="" class="email_text" placeholder="Enter Your Email" name="Enter Your Email">
@@ -144,22 +143,22 @@
       </div>
       <div class="social_icon">
         <ul>
-          <li><a href="#"><img src="images/fb-icon.png"></a></li>
-          <li><a href="#"><img src="images/twitter-icon.png"></a></li>
-          <li><a href="#"><img src="images/linkdin-icon.png"></a></li>
-          <li><a href="#"><img src="images/instagram-icon.png"></a></li>
+          <li><a href="https://id-id.facebook.com/login.php/"><img src="images/fb-icon.png"></a></li>
+          <li><a href="https://x.com/login?"><img src="images/twitter-icon.png"></a></li>
+          <li><a href="https://www.linkedin.com/in/adiknurhalimah"><img src="images/linkdin-icon.png"></a></li>
+          <li><a href="instagram.com/aaadiknhh_"><img src="images/instagram-icon.png"></a></li>
         </ul>
       </div>
     </div>
+      <!-- copyright section start -->
+      <div class="copyright_section">
+        <div class="container">
+          <p class="copyright_text">Copyright 2024 All Right Reserved By <a href="#"> Play Verse</p>
+        </div>
+      </div>
+      <!-- copyright section end -->
   </div>
   <!-- footer section end -->
-  <!-- copyright section start -->
-  <div class="copyright_section">
-    <div class="container">
-      <p class="copyright_text">Copyright 2020 All Right Reserved By <a href="https://html.design/"> Free html Templates</p>
-    </div>
-  </div>
-  <!-- copyright section end -->
   <!-- Javascript files-->
     <script src="js/jquery.min.js"></script>
     <script src="js/popper.min.js"></script>
