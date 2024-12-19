@@ -1,0 +1,16 @@
+.login_section{
+    background-color: rgba(255, 255, 255, 0);
+    border-radius: 25px;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(219, 130, 252, 0);
+}
+.login_text{
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+.long_text{
+    margin-bottom:20px ;
+}
+.forgot_password{
+    margin-top: 15px;
+}
