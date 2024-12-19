@@ -21,7 +21,6 @@ $result_user = mysqli_query($conn, $query_user);
 if (mysqli_num_rows($result_user) > 0) {
     session_start();
     $_SESSION['logged_in'] = true;
-    $_SESSION['id'] = $user['id'];
     $_SESSION['username'] = $username;
     $_SESSION['role'] = 'user';
     header("Location: index.php");
