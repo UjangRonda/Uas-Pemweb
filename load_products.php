@@ -27,7 +27,11 @@ if ($result->num_rows > 0) {
                 <div class="price_text">Price $ <span style="color: #3a3a38;">' . htmlspecialchars($row['price']) . '</span></div>
                 <h1 class="game_text">' . htmlspecialchars($row['name']) . '</h1>
                 <p class="long_text">' . htmlspecialchars($row['description']) . '</p>
-              </div>';
+                <div class="buy-button">
+              <a href="transaction.php?product_id='. htmlspecialchars($row['id']) .'" class="btn btn-primary"> Buy now</a>
+            </div>
+              </div>'
+              ;
     }
 } else {
     // Jika tidak ada produk lagi
