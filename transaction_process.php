@@ -22,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             
             $conn->commit();
             
-            header("Location: transaction_success.php?id=" . $transaction_id);
+            header("Location: transaction_success.php");
             exit();
         } else {
             throw new Exception("Failed to process transaction");

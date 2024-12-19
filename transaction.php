@@ -1,13 +1,6 @@
 <?php 
     session_start();
     include 'koneksi.php';
-    
-    if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true || !isset($_SESSION['id'])) {
-        $_SESSION['redirect_url'] = $_SERVER['REQUEST_URI'];
-        header("Location: login.php");
-        exit();
-    }
-
 
     $product_id = isset($_GET['product_id']) ? (int)$_GET['product_id'] : 0;
     
@@ -21,6 +14,20 @@
     if (!$product) {
         header("Location: index.php");
         exit();
+    }
+
+    $query_user = "SELECT id FROM users WHERE username = ?";
+    $statement = $conn->prepare($query_user);
+    $statement->bind_param("i", $_SESSION['username']);
+    $statement->execute();
+
+    $user_id = $statement->get_result();
+
+    if ($user_id->num_rows > 0) {
+        $row = $user_id->fetch_assoc();
+        $user_id = $row['id'];
+    } else {
+        echo "User tidak ditemukan.";
     }
 ?>
 
@@ -62,18 +69,16 @@
         <div class="product-summary">
             <h3>Product: <?php echo htmlspecialchars($product['name']); ?></h3>
             <p>Price: $<?php echo htmlspecialchars($product['price']); ?></p>
-            <p>Logged in as: <?php echo $_SESSION['username']; ?> (ID: <?php echo $_SESSION['id']; ?>)</p>
+            <p>Customer: <?php echo $_SESSION['username']; ?></p>
         </div>
 
         <form action="transaction_process.php" method="POST">
+            <input type="hidden" name="user_id" value="<?php echo $user_id; ?>">
             <input type="hidden" name="product_id" value="<?php echo $product_id; ?>">
-            <input type="hidden" name="user_id" value="<?php echo $_SESSION['id']; ?>">
-            
             <div class="form-group">
                 <label>Shipping Address</label>
                 <textarea name="shipping_address" class="form-control" required></textarea>
             </div>
-
             <button type="submit" class="btn btn-primary">Confirm Purchase</button>
         </form>
     </div>
