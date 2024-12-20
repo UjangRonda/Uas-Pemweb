@@ -187,5 +187,188 @@
   <!-- javascript -->
   <script src="js/owl.carousel.js"></script>
   <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+      const username = document.getElementById('username');
+      const address = document.getElementById('address');
+      const password = document.getElementById('password');
+      const confirm_password = document.getElementById('confirm_password');
+      
+      username.addEventListener('input', function() {
+          const messageDiv = document.getElementById('username-message');
+          if(this.value.length < 4) {
+              setInvalid(this, messageDiv, 'Username minimal 4 karakter');
+          } else {
+              setValid(this, messageDiv);
+          }
+      });
+
+      address.addEventListener('input', function() {
+          const messageDiv = document.getElementById('address-message');
+          if(this.value.length < 5) {
+              setInvalid(this, messageDiv, 'Alamat minimal 10 karakter');
+          } else {
+              setValid(this, messageDiv);
+          }
+      });
+
+      password.addEventListener('input', function() {
+          const messageDiv = document.getElementById('password-message');
+          const regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/;
+          
+          if(!regex.test(this.value)) {
+              setInvalid(this, messageDiv, 'Password minimal 8 karakter, harus mengandung huruf besar, huruf kecil, dan angka');
+          } else {
+              setValid(this, messageDiv);
+          }
+          
+          if(confirm_password.value) {
+              confirm_password.dispatchEvent(new Event('input'));
+          }
+      });
+
+      confirm_password.addEventListener('input', function() {
+          const messageDiv = document.getElementById('confirm_password-message');
+          if(this.value !== password.value) {
+              setInvalid(this, messageDiv, 'Password tidak cocok');
+          } else {
+              setValid(this, messageDiv);
+          }
+      });
+
+      function setInvalid(element, messageDiv, message) {
+          element.classList.add('is-invalid');
+          element.classList.remove('is-valid');
+          messageDiv.textContent = message;
+          messageDiv.style.display = 'block';
+      }
+
+      function setValid(element, messageDiv) {
+          element.classList.remove('is-invalid');
+          element.classList.add('is-valid');
+          messageDiv.style.display = 'none';
+      }
+
+      document.querySelector('form').addEventListener('submit', function(e) {
+          const inputs = [username, address, password, confirm_password];
+          let isValid = true;
+
+          inputs.forEach(input => {
+              if(input.classList.contains('is-invalid') || input.value.length === 0) {
+                  isValid = false;
+                  input.dispatchEvent(new Event('input'));
+              }
+          });
+
+          if(!document.getElementById('agree').checked) {
+              isValid = false;
+              alert('Anda harus menyetujui syarat dan ketentuan!');
+          }
+
+          if(!isValid) {
+              e.preventDefault();
+          }
+      });
+  });
+  </script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const username = document.getElementById('username');
+    const address = document.getElementById('address');
+    const password = document.getElementById('password');
+    const confirm_password = document.getElementById('confirm_password');
+    
+    // Validasi Username
+    username.addEventListener('input', function() {
+        if(this.value.length >= 4) {
+            this.classList.remove('is-invalid');
+            this.classList.add('is-valid');
+        } else {
+            this.classList.remove('is-valid');
+            this.classList.add('is-invalid');
+        }
+    });
+
+    // Validasi Address
+    address.addEventListener('input', function() {
+        if(this.value.length >= 10) {
+            this.classList.remove('is-invalid');
+            this.classList.add('is-valid');
+        } else {
+            this.classList.remove('is-valid');
+            this.classList.add('is-invalid');
+        }
+    });
+
+    // Tambahkan tooltip untuk password
+    const passwordField = document.getElementById('password');
+    const tooltip = document.createElement('div');
+    tooltip.className = 'password-tooltip';
+    tooltip.innerHTML = 'Password harus memenuhi kriteria:<br>- Minimal 8 karakter<br>- Minimal 1 huruf besar<br>- Minimal 1 huruf kecil<br>- Minimal 1 angka';
+    passwordField.parentElement.appendChild(tooltip);
+
+    // Tampilkan tooltip saat password field difokuskan
+    passwordField.addEventListener('focus', function() {
+        tooltip.style.display = 'block';
+    });
+
+    // Sembunyikan tooltip saat password field kehilangan fokus
+    passwordField.addEventListener('blur', function() {
+        tooltip.style.display = 'none';
+    });
+
+    // Validasi Password
+    password.addEventListener('input', function() {
+        const regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/;
+        if(regex.test(this.value)) {
+            this.classList.remove('is-invalid');
+            this.classList.add('is-valid');
+        } else {
+            this.classList.remove('is-valid');
+            this.classList.add('is-invalid');
+        }
+        
+        if(confirm_password.value) {
+            confirm_password.dispatchEvent(new Event('input'));
+        }
+    });
+
+    // Validasi Confirm Password
+    confirm_password.addEventListener('input', function() {
+        if(this.value === password.value && this.value !== '') {
+            this.classList.remove('is-invalid');
+            this.classList.add('is-valid');
+        } else {
+            this.classList.remove('is-valid');
+            this.classList.add('is-invalid');
+        }
+    });
+
+    // Validasi form submit
+    document.querySelector('form').addEventListener('submit', function(e) {
+        const inputs = [username, address, password, confirm_password];
+        let isValid = true;
+
+        inputs.forEach(input => {
+            if(input.classList.contains('is-invalid') || !input.value) {
+                isValid = false;
+                input.classList.add('is-invalid');
+            }
+        });
+
+        if(!document.getElementById('agree').checked) {
+            isValid = false;
+            alert('Anda harus menyetujui syarat dan ketentuan!');
+        }
+
+        if(!isValid) {
+            e.preventDefault();
+        }
+    });
+});
+</script>
+
 </body>
 </html>
