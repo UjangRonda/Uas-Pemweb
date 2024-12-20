@@ -96,7 +96,6 @@ function getStatus($status) {
             <p>Date: <?php echo date('F j, Y', strtotime($transaction['transaction_date'])); ?></p>
         </div>
         <div class="text-center">
-            <a href="generate_pdf.php?id=<?php echo $transaction_id; ?>" class="btn btn-success">Download as PDF</a>
             <a href="index.php" class="btn btn-primary">Back to Products</a>
         </div>
     </div>
