@@ -39,6 +39,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // Cek login sebagai user
+    // Cek login sebagai user
     $query_user = "SELECT id, username, password FROM users WHERE username = ?";
     $stmt_user = $conn->prepare($query_user);
     $stmt_user->bind_param("s", $username);
@@ -47,20 +48,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if ($result_user->num_rows > 0) {
         $user = $result_user->fetch_assoc();
-        
-        // Untuk user, gunakan password_verify jika password di-hash
-        if ($password === $user['password']) { // Sesuaikan dengan metode penyimpanan password user
+
+        // Verifikasi password
+        if (password_verify($password, $user['password'])) {
             $_SESSION['user_id'] = $user['id'];
             $_SESSION['username'] = $user['username'];
             $_SESSION['role'] = 'user';
-            $_SESSION['logged_in'] = true; // Tambahkan flag login
-            
             header("Location: index.php");
             exit();
         } else {
             echo "<script>alert('Password salah!'); window.location.href='login.php';</script>";
             exit();
         }
+    
     } else {
         echo "<script>alert('Username tidak ditemukan!'); window.location.href='login.php';</script>";
         exit();
