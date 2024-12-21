@@ -471,16 +471,11 @@ button {
     border-radius: 8px;
 }
   
-.product_card .price_text {
-    font-size: 16px;
-    color: #3371e2;
-    margin: 10px 0 0 0;
-}
-  
 .product_card .game_text {
     font-size: 16px;
     font-weight: bold;
     margin: 10px 0;
+    text-align: center;
   }
   
 .product_card .long_text {
@@ -502,6 +497,14 @@ button {
 }
   
 .long_text{
+    width: 90%;
+    float: left;
+    font-size: 16px;
+    color: #000000;
+    margin-left: 50px;
+    text-align: center;
+}
+.long_text1{
     width: 90%;
     float: left;
     font-size: 16px;

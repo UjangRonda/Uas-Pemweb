@@ -153,32 +153,29 @@
   <!-- product section start -->
 <div class="product_section layout_padding">
   <div class="container">
-    <div class="product_text">Our Products</div>
-    <p class="long_text1"><b>Play Verse menyediakan berbagai produk gaming berkualitas, termasuk gamepad, aksesoris gaming seperti headset, mouse, dan keyboard, serta video game terbaru. Semua produk kami dirancang untuk memberikan pengalaman bermain yang optimal dan menyenangkan.</b></p>
+    <div class="product_text">Hot Games</div>
+    <p class="long_text1"><b>Hot Games favorit kini lebih mudah didapatkan di Play Verse. Level up sekarang!</b></p>
     <div class="product_section_2">
       <div class="row">
         <div class="col-md-4">
           <div class="product_card">
             <div class="image_2"><img src="images/produk1.jpg"></div>
-            <div class="price_text">Price Rp <span style="color: #3371e2;">16.469.827</span></div>
-            <h1 class="game_text">Microsoft Xbox Series X</h1>
-            <p class="long_text">Xbox Series X adalah konsol game generasi terbaru dari Microsoft yang menawarkan performa luar biasa dengan grafis 4K dan frame rate hingga 120 FPS. Ditenagai oleh prosesor custom, SSD super cepat, dan dukungan ray tracing.</p>
+            <h1 class="game_text">ROBLOX</h1>
+            <p class="long_text">Game online seru untuk eksplorasi dunia virtual dan bermain ribuan mini-game bersama teman.</p>
           </div>
         </div>
         <div class="col-md-4">
           <div class="product_card">
             <div class="image_2"><img src="images/produk2.png"></div>
-            <div class="price_text">Price Rp <span style="color: #3371e2;">599.000</span></div>
             <h1 class="game_text">The Witcher 3: Wild Hunt</h1>
-            <p class="long_text">Sebagai Geralt of Rivia, pemain berpetualang di dunia terbuka yang luas, memecahkan misteri, bertarung dengan monster, dan memilih keputusan moral yang memengaruhi alur cerita. Game RPG ini menawarkan grafis memukau dan gameplay mendalam.</p>
+            <p class="long_text">Game RPG berburu monster dalam dunia terbuka penuh cerita epik.</p>
           </div>
         </div>
         <div class="col-md-4">
           <div class="product_card">
             <div class="image_2"><img src="images/produk3.png"></div>
-            <div class="price_text">Price Rp <span style="color: #3371e2;">699.000</span></div>
             <h1 class="game_text">Call of Duty: Modern Warfare</h1>
-            <p class="long_text">S Game tembak-menembak aksi dengan grafis realistis dan mode multiplayer intens. Game ini memiliki kampanye pemain tunggal yang mendalam serta mode battle royale yang seru.</p>
+            <p class="long_text">Game tembak-menembak intens dengan mode kampanye dan multiplayer kompetitif.</p>
           </div>
         </div>
       </div>
@@ -288,6 +285,7 @@
             <h2 class="account_text">Follow Play Verse</h2>
             <p class="ipsum_text_2">Ikuti Play Verse untuk update terbaru, penawaran menarik, dan nikmati pengalaman gaming yang lebih seru</p>
           </div>
+y
         </div>
       </div>
       <div class="social_icon">
