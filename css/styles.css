@@ -745,12 +745,14 @@ button {
     padding-top: 8px;
     margin-top: 60px;
 }
-.main_bt a {
-    color: #faf9f9;
+.main_bt .btn {
+    background-color: #ed1c24;
+    border: none;
 }
 
-.main_bt a:hover{
+.main_bt .btn:hover{
     color: #fec108;
+    background-color: #ed1c24;
 }
 
 .ipsum_text_2 {

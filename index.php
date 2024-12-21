@@ -159,7 +159,7 @@
       <div class="row">
         <div class="col-md-4">
           <div class="product_card">
-            <div class="image_2"><img src="images/produk1.jpg"></div>
+            <div class="image_2"><img src="images/produk1.png"></div>
             <h1 class="game_text">ROBLOX</h1>
             <p class="long_text">Game online seru untuk eksplorasi dunia virtual dan bermain ribuan mini-game bersama teman.</p>
           </div>
@@ -236,22 +236,24 @@
           <div class="email_box">
             <div class="input_main">
               <div class="container">
-                <form action="/action_page.php">
+                <form action="feedback.php" method="POST">
                   <div class="form-group">
-                    <input type="text" class="email-bt" placeholder="Name" name="Name">
+                    <input type="text" class="email-bt" placeholder="Name" name="name">
                   </div>
                   <div class="form-group">
-                    <input type="text" class="email-bt" placeholder="Email" name="Name">
+                    <input type="text" class="email-bt" placeholder="Email" name="email">
                   </div>
                   <div class="form-group">
-                    <input type="text" class="email-bt" placeholder="Phone Numbar" name="Email">
+                    <input type="text" class="email-bt" placeholder="Phone Numbar" name="phone">
                   </div>
                   <div class="form-group">
-                    <textarea class="massage-bt" placeholder="Massage" rows="5" id="comment" name="Massage"></textarea>
+                    <textarea class="massage-bt" placeholder="Massage" rows="5" id="comment" name="message"></textarea>
+                  </div>
+                  <div class="main_bt">
+                    <button type="submit" class="btn btn-primary"> Kirim </button>
                   </div>
                 </form>
               </div>
-              <div class="main_bt"><a href="#">Send Message</a></div>
             </div>
           </div>
         </div>
@@ -285,7 +287,6 @@
             <h2 class="account_text">Follow Play Verse</h2>
             <p class="ipsum_text_2">Ikuti Play Verse untuk update terbaru, penawaran menarik, dan nikmati pengalaman gaming yang lebih seru</p>
           </div>
-y
         </div>
       </div>
       <div class="social_icon">
