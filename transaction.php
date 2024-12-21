@@ -31,6 +31,8 @@
 <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="css/styles.css">
 <link rel="stylesheet" href="css/responsive.css">
+<!-- fevicon -->
+<link rel="icon" href="images/Logo Play Verse.png" type="image/gif" />
 <link rel="icon" href="images/fevicon.png" type="image/gif" />
 <link rel="stylesheet" href="css/style-transaction.css">
 </head>

@@ -136,11 +136,6 @@
             <h2 class="account_text">Follow Play Verse</h2>
             <p class="ipsum_text_2">Ikuti Play Verse untuk update terbaru, penawaran menarik, dan nikmati pengalaman gaming yang lebih seru</p>
           </div>
-          <div class="col-sm-6 col-md-6 col-lg-3">
-            <h2 class="account_text">Newsletter</h2>
-            <input type="" class="email_text" placeholder="Enter Your Email" name="Enter Your Email">
-            <button class="subscribr_bt">SUBSCRIBE</button>
-          </div>
         </div>
       </div>
       <div class="social_icon">
