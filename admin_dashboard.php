@@ -141,6 +141,7 @@ while ($row = mysqli_fetch_assoc($result_chart)) {
           <a href="admin_dashboard.php" class="sidebar-link active">Overview</a>
           <a href="manage_products.php" class="sidebar-link">Manage Products</a>
           <a href="manage_transactions.php" class="sidebar-link">Manage Transactions</a>
+          <a href="admin/users.php" class="sidebar-link">Manage Users</a>
         </div>
       </div>
 

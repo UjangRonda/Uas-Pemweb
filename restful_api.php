@@ -1,8 +1,6 @@
 <?php
 header("Content-Type: application/json");
 
-
-
 // Koneksi database
 $host = "localhost";
 $user = "root";
@@ -15,6 +13,10 @@ if ($conn->connect_error) {
     echo json_encode(["error" => "Database connection failed: " . $conn->connect_error]);
     exit;
 }
+
+//  Buat yang ini nyoba restful api, contohnya
+//  http://localhost/restful_api.php?url=users/2
+
 
 // Parsing URL
 $url = isset($_GET['url']) ? explode('/', trim($_GET['url'], '/')) : [];

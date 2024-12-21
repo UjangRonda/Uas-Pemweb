@@ -1,5 +1,5 @@
 <?php
-include 'koneksi.php';
+include '../koneksi.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Sanitasi input
@@ -49,7 +49,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Jika ada error, kembalikan ke halaman register
     if(!empty($errors)) {
         $error_message = implode('\n', $errors);
-        echo "<script>alert('$error_message'); window.location.href='register.php';</script>";
+        echo "<script>alert('$error_message'); window.location.href='users.php';</script>";
         exit();
     }
 
@@ -61,13 +61,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
               VALUES ('$username', '$address', '$password')";
     
     if (mysqli_query($conn, $query)) {
-        session_start();
-        $_SESSION['username'] = $username;
-        $_SESSION['role'] = 'user';
-        echo "<script>alert('Registrasi berhasil!'); window.location.href='index.php';</script>";
+        echo "<script>alert('Create User berhasil!'); window.location.href='users.php';</script>";
         exit();
     } else {
-        echo "<script>alert('Registrasi gagal: " . mysqli_error($conn) . "'); window.location.href='register.php';</script>";
+        echo "<script>alert('Create User gagal: " . mysqli_error($conn) . "'); window.location.href='users.php';</script>";
     }
 } else {
     header("Location: register.php");
