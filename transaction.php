@@ -46,7 +46,7 @@
                 </div>
             </div>
             <div class="col-md-6">
-                <img src="<?php echo htmlspecialchars($product['image']); ?>" alt="Product Image">
+            <img src="images/<?php echo htmlspecialchars($product['image']); ?>" alt="<?php echo htmlspecialchars($product['name']); ?>">
             </div>
         </div>
         <form action="transaction_process.php" method="POST">
