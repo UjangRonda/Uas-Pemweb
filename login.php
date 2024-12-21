@@ -169,51 +169,51 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
   <script>
-document.addEventListener('DOMContentLoaded', function() {
-    const username = document.getElementById('username');
-    const password = document.getElementById('password');
+// document.addEventListener('DOMContentLoaded', function() {
+//     const username = document.getElementById('username');
+//     const password = document.getElementById('password');
     
-    // Validasi Username
-    username.addEventListener('input', function() {
-        if(this.value.length >= 4) {
-            this.classList.remove('is-invalid');
-            this.classList.add('is-valid');
-        } else {
-            this.classList.remove('is-valid');
-            this.classList.add('is-invalid');
-        }
-    });
+//     // Validasi Username
+//     username.addEventListener('input', function() {
+//         if(this.value.length >= 4) {
+//             this.classList.remove('is-invalid');
+//             this.classList.add('is-valid');
+//         } else {
+//             this.classList.remove('is-valid');
+//             this.classList.add('is-invalid');
+//         }
+//     });
 
-    // Validasi Password
-    password.addEventListener('input', function() {
-        const regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/;
-        if(regex.test(this.value)) {
-            this.classList.remove('is-invalid');
-            this.classList.add('is-valid');
-        } else {
-            this.classList.remove('is-valid');
-            this.classList.add('is-invalid');
-        }
-    });
+//     // Validasi Password
+//     password.addEventListener('input', function() {
+//         const regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/;
+//         if(regex.test(this.value)) {
+//             this.classList.remove('is-invalid');
+//             this.classList.add('is-valid');
+//         } else {
+//             this.classList.remove('is-valid');
+//             this.classList.add('is-invalid');
+//         }
+//     });
 
-    // Validasi form submit
-    document.querySelector('form').addEventListener('submit', function(e) {
-        const inputs = [username, password];
-        let isValid = true;
+//     // Validasi form submit
+//     document.querySelector('form').addEventListener('submit', function(e) {
+//         const inputs = [username, password];
+//         let isValid = true;
 
-        inputs.forEach(input => {
-            if(input.classList.contains('is-invalid') || !input.value) {
-                isValid = false;
-                input.classList.add('is-invalid');
-            }
-        });
+//         inputs.forEach(input => {
+//             if(input.classList.contains('is-invalid') || !input.value) {
+//                 isValid = false;
+//                 input.classList.add('is-invalid');
+//             }
+//         });
 
-        if(!isValid) {
-            e.preventDefault();
-            alert('Username atau password tidak valid!');
-        }
-    });
-});
+//         if(!isValid) {
+//             e.preventDefault();
+//             alert('Username atau password tidak valid!');
+//         }
+//     });
+// });
 </script>
 
 </body>
