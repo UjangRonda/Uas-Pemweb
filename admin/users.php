@@ -269,8 +269,8 @@ $showModule = true;
                                         <td><?= htmlspecialchars($row['address']); ?></td>
                                         <td><?= htmlspecialchars($row['password']); ?></td>
                                         <td>
-                                            <a href="edit.php?id=<?= $row['id']; ?>" class="btn ">Edit</a>
-                                            <a href="delete.php?id=<?= $row['id']; ?>" class="btn delete" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')">Delete</a>
+                                            <a href="edit.php?type=users&id=<?= $row['id']; ?>" class="btn ">Edit</a>
+                                            <a href="delete.php?type=users&id=<?= $row['id']; ?>" class="btn delete" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')">Delete</a>
                                         </td>
                                     </tr>
                                 <?php endwhile; ?>

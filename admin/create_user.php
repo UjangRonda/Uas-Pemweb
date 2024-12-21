@@ -1,7 +1,8 @@
 <?php
 include '../koneksi.php';
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+$tipe = $_GET['type'];
+if ($_SERVER["REQUEST_METHOD"] == "POST" && $_GET['type' == 'users']) {
     // Sanitasi input
     $username = mysqli_real_escape_string($conn, trim($_POST['username']));
     $address = mysqli_real_escape_string($conn, trim($_POST['address']));
@@ -66,7 +67,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } else {
         echo "<script>alert('Create User gagal: " . mysqli_error($conn) . "'); window.location.href='users.php';</script>";
     }
-} else {
+}else if ($_SERVER["REQUEST_METHOD"] == "POST" && $_GET['type' == 'products']){
+
+}else if ($_SERVER["REQUEST_METHOD"] == "POST" && $_GET['type' == 'transaction']){
+
+}
+else {
     header("Location: register.php");
     exit();
 }
