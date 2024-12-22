@@ -140,7 +140,7 @@ while ($row = mysqli_fetch_assoc($result_chart)) {
           <h4 class="mb-4">Dashboard Menu</h4>
           <a href="admin_dashboard.php" class="sidebar-link active">Overview</a>
           <a href="admin/products.php" class="sidebar-link">Manage Products</a>
-          <a href="manage_transactions.php" class="sidebar-link">Manage Transactions</a>
+          <a href="admin/transactions.php" class="sidebar-link">Manage Transactions</a>
           <a href="admin/users.php" class="sidebar-link">Manage Users</a>
         </div>
       </div>

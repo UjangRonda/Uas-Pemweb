@@ -19,6 +19,7 @@ $showModule = true;
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Play Verse Admin - Manage Users</title>
     <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="../css/styles.css">
     <link rel="stylesheet" href="../css/responsive.css">
@@ -85,7 +86,35 @@ $showModule = true;
             text-align: center;
             transition: 0.3s ease;
         }
-
+        .btn-add {
+            padding: 8px 12px;
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 600;
+            text-align: center;
+            transition: 0.3s ease;
+        }
+        .btn-icon {
+            font-size: 10px;
+            border-radius: 5px;
+            padding: 8px 12px;
+            background-color: #fcba03;
+            color: white;
+            text-align: center;
+            transition: 0.3s ease;
+        }
+        .btn-icon.delete{
+            background-color: #e74c3c;
+        }
+        .btn-icon:hover{
+            color: white;
+            background-color: orange;
+        }
+        .btn-icon.delete:hover{
+            background-color: #c0392b;
+        }
         .btn:hover {
             background-color: #2980b9;
         }
@@ -269,8 +298,8 @@ $showModule = true;
                                         <td><?= htmlspecialchars($row['address']); ?></td>
                                         <td><?= htmlspecialchars($row['password']); ?></td>
                                         <td>
-                                            <a href="edit.php?type=users&id=<?= $row['id']; ?>" class="btn ">Edit</a>
-                                            <a href="delete.php?type=users&id=<?= $row['id']; ?>" class="btn delete" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')">Delete</a>
+                                            <a href="edit.php?type=users&id=<?= $row['id']; ?>" class="btn-icon fas fa-edit"></a>
+                                            <a href="delete.php?type=users&id=<?= $row['id']; ?>" class="btn-icon delete fas fa-trash-alt" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')"></a>
                                         </td>
                                     </tr>
                                 <?php endwhile; ?>

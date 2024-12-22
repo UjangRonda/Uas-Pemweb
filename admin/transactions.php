@@ -6,7 +6,17 @@ if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true || $_SESSI
     header("Location: login.php");
     exit();
 }
-$query = "SELECT * FROM products";
+$query = "SELECT 
+    transactions.transaction_id,
+    users.username,
+    products.name AS product_name,
+    transactions.shipping_address,
+    transactions.transaction_date,
+    transactions.status
+FROM transactions
+JOIN users ON transactions.user_id = users.id
+JOIN products ON transactions.product_id = products.id;
+";
 $result = mysqli_query($conn, $query);
 
 $showModule = true;
@@ -18,8 +28,8 @@ $showModule = true;
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Play Verse Admin - Manage Users</title>
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
     <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="../css/styles.css">
     <link rel="stylesheet" href="../css/responsive.css">
@@ -86,6 +96,16 @@ $showModule = true;
             text-align: center;
             transition: 0.3s ease;
         }
+        .btn-add {
+            padding: 8px 12px;
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 600;
+            text-align: center;
+            transition: 0.3s ease;
+        }
         .btn-icon {
             font-size: 10px;
             border-radius: 5px;
@@ -117,6 +137,7 @@ $showModule = true;
         .btn.delete:hover {
             background-color: #c0392b;
         }
+
         .dataTable th,
         .dataTable td {
             border: 1px solid #ddd;
@@ -222,7 +243,7 @@ $showModule = true;
             <!-- Main Content -->
             <div class="col-md-9">
                 <div class="content-area">
-                    <h2 class="">Manage Products</h2>
+                    <h2 class="">Manage Transaction</h2>
                     <button id="toggleBtn" class="btn btn-primary mt-3">Add</button>
                     <?php if ($showModule): ?>
                         <div id="module" class="mt-3">
@@ -275,24 +296,26 @@ $showModule = true;
                             <thead>
                                 <tr>
                                     <th>ID</th>
+                                    <th>Username</th>
                                     <th>Product Name</th>
-                                    <th>Description</th>
-                                    <th>Price</th>
-                                    <th>Image</th>
+                                    <th>Transaction Date</th>
+                                    <th>Shipping Address</th>
+                                    <th>Status</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <?php while ($row = mysqli_fetch_assoc($result)): ?>
                                     <tr>
-                                        <td><?= htmlspecialchars($row['id']); ?></td>
-                                        <td><?= htmlspecialchars($row['name']); ?></td>
-                                        <td><?= htmlspecialchars($row['description']); ?></td>
-                                        <td><?= 'Rp.' . number_format($row['price'], 0, ',', '.'); ?></td>
-                                        <td><?= htmlspecialchars($row['image']); ?></td>
+                                        <td><?= htmlspecialchars($row['transaction_id']); ?></td>
+                                        <td><?= htmlspecialchars($row['username']); ?></td>
+                                        <td><?= htmlspecialchars($row['product_name']); ?></td>
+                                        <td><?= htmlspecialchars($row['transaction_date']); ?></td>
+                                        <td><?= htmlspecialchars($row['shipping_address']); ?></td>
+                                        <td><?= htmlspecialchars($row['status']); ?></td>
                                         <td>
-                                            <a href="edit_products.php?type=products&id=<?= $row['id']; ?>" class="btn-icon fas fa-edit"></a>
-                                            <a href="delete.php?type=products&id=<?= $row['id']; ?>" class="btn-icon delete fas fa-trash-alt" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')"></a>
+                                            <a href="edit_transactions.php?type=transactions&id=<?= $row['transaction_id']; ?>" class="btn-icon fas fa-edit"></a>
+                                            <a href="delete.php?type=transactions&id=<?= $row['transaction_id']; ?>" class="btn-icon delete fas fa-trash-alt" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')"></a>
                                         </td>
                                     </tr>
                                 <?php endwhile; ?>
