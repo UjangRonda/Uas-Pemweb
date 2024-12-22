@@ -49,129 +49,6 @@ body {
      overflow-x: hidden;
 }
 
-body.dark-mode {
-    color: #cccccc;
-    background-color: #121212;
-}
-
-body.dark-mode * {
-    background-color: inherit;
-    color: inherit;
-    border-color: #333333;
-}
-
-.navbar.dark-mode {
-    background-color: #1a1a1a;
-    color: #e0e0e0;
-}
-
-body.dark-mode .navbar .nav-link {
-    color: #bdbdbd;
-}
-
-body.dark-mode .navbar .nav-link:hover {
-    color: #82cfff;
-}
-
-body.dark-mode .section_footer {
-    background-color: #181818;
-    color: #bdbdbd;
-}
-
-body.dark-mode .section_footer a {
-    color: #82cfff;
-}
-
-body.dark-mode .product_card {
-    background-color: #1e1e1e;
-    border: 1px solid #333333;
-    color: #e0e0e0;
-}
-
-body.dark-mode .testimonial_section {
-    background-color: #1e1e1e;
-    color: #e0e0e0;
-}
-
-body.dark-mode input,
-body.dark-mode textarea {
-    background-color: #262626;
-    color: #ffffff;
-    border: 1px solid #444444;
-}
-
-body.dark-mode input::placeholder,
-body.dark-mode textarea::placeholder {
-    color: #b0b0b0;
-}
-
-body.dark-mode h1, 
-body.dark-mode h2, 
-body.dark-mode h3, 
-body.dark-mode h4, 
-body.dark-mode h5, 
-body.dark-mode h6 {
-    color: #ffffff;
-}
-
-body.dark-mode p {
-    color: #bdbdbd;
-}
-
-body.dark-mode a {
-    color: #4f9dff;
-}
-
-body.dark-mode a:hover {
-    color: #82cfff;
-}
-
-body.dark-mode .btn {
-    background-color: #333333;
-    color: #ffffff;
-    border: 1px solid #444444;
-}
-
-body.dark-mode .btn:hover {
-    background-color: #444444;
-}
-
-body.dark-mode .banner_section {
-    background-color: #1a1a1a;
-    color: #ffffff;
-}
-
-body.dark-mode .shop_bt {
-    background-image: linear-gradient(to right, #444444, #555555, #666666);
-}
-
-body.dark-mode .shop_bt:hover {
-    background-image: linear-gradient(to right, #666666, #555555, #444444);
-}
-
-body.dark-mode .about_section {
-    background-color: #1a1a1a;
-    color: #ffffff;
-}
-
-body.dark-mode .video_section {
-    background-color: #1a1a1a;
-    color: #ffffff;
-}
-
-body.dark-mode .contact_section {
-    background-color: #1c1c1c;
-    color: #cccccc;
-}
-
-body.dark-mode .social_icon li a {
-    color: #cccccc;
-}
-
-body.dark-mode .social_icon li a:hover {
-    color: #4f9dff;
-}
-
 a {
      color: #1f1f1f;
      text-decoration: none !important;
@@ -555,58 +432,130 @@ button {
     color: #ffffff;
 }
 
+/* Product Section */
+
+.product_section {
+    width: 100%;
+    padding: 50px 0; /* Tambahkan padding atas dan bawah */
+}
+
+.product_text {
+    color: #3371e2;
+    font-size: 50px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 20px; /* Jarak dengan deskripsi */
+}
+
+.long_text1 {
+    text-align: center;
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 40px; /* Tambahkan jarak dengan card */
+}
+
+.product_section_2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 10px;
+}
+
 .product_card {
-    padding: 15px; 
-    border: 2px solid #3371e2; 
+    flex: 1 1 calc(33.333% - 30px); /* Card memiliki lebar 1/3 */
+    padding: 15px;
+    border: 2px solid #3371e2;
     border-radius: 10px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    width: 100%; /* Pastikan kartu mengambil lebar penuh dalam kolom */
-    max-height: 450px; /* Batas tinggi maksimum */
-    display: flex; /* Gunakan Flexbox */
-    flex-direction: column; /* Susun elemen secara vertikal */
-    justify-content: space-between; /* Pastikan elemen terdistribusi dengan baik */
-    text-align: left; /* Teks rata kiri */
+    max-height: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Pusatkan konten */
+    text-align: center;
+}
+
+.product_card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .product_card .image_2 img {
     width: 100%;
-    height: 200px; 
-    object-fit: cover; 
+    height: 130%;
+    aspect-ratio: 16/9; /* Menjaga rasio gambar */
+    object-fit: cover;
     border-radius: 8px;
+    margin-bottom: 15px; /* Jarak ke bawah */
+    position: relative; /* Untuk memungkinkan z-index */
+    top: -30px; /* Geser gambar ke atas */
+    z-index: 1; /* Pastikan gambar berada di atas card */
 }
 
-.product_card .game_text {
-    font-size: 18px; 
+.product_card .image_2 {
+    width: 100%;
+    position: relative;
+    top: -20px; /* Angkat container gambar */
+    z-index: 1;
+}
+
+.game_text {
+    font-size: 18px;
     font-weight: bold;
-    text-align: center;
+    margin: 20px 0 10px; /* Tambahkan margin atas untuk menggeser ke bawah */
+    text-align: center; /* (Opsional) Jika ingin tetap di tengah */
+    color: #333;
 }
 
-.product_card .long_text {
+.long_text {
     font-size: 14px;
-    color: #000000;
-    margin-top: 10px; /* Tambahkan jarak atas untuk pemisahan */
-    max-height: 60px; /* Batasi tinggi deskripsi */
-    overflow: hidden; /* Sembunyikan teks yang melebihi batas */
-    text-overflow: ellipsis; /* Tambahkan tanda titik-titik jika teks terlalu panjang */
-    white-space: normal; /* Pastikan teks membungkus ke baris baru */
-    line-height: 1.5; /* Sesuaikan jarak antar baris */
+    color: #666;
+    margin-top: 5px;
 }
 
-.product_section_2 {
-    display: flex; 
-    flex-wrap: wrap; 
-    gap: 20px; 
-    justify-content: center; 
-    padding: 20px;
+.see_main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
 }
 
-.long_text1 {
-    width: 100%; 
-    font-size: 16px;
-    color: #000000;
-    margin: 10px 0;
-    text-align: center;
+.see_bt a {
+    text-decoration: none;
+    padding: 10px 30px;
+    font-size: 18px;
+    background: linear-gradient(to right, #7325ee, #3371e2, #00c2cb);
+    color: white;
+    border-radius: 30px;
+    transition: all 0.3s ease;
 }
+
+.see_bt a:hover {
+    background: linear-gradient(to right, #00c2cb, #3371e2, #7325ee);
+    transform: scale(1.03);
+}
+
+/* Media Query for Responsiveness */
+@media (max-width: 768px) {
+    .product_card {
+        flex: 1 1 calc(50% - 20px); /* Card menjadi 2 kolom */
+    }
+}
+
+@media (max-width: 480px) {
+    .product_card {
+        flex: 1 1 100%; /* Card menjadi 1 kolom */
+    }
+
+    .product_text {
+        font-size: 36px; /* Sesuaikan ukuran font */
+    }
+
+    .long_text1 {
+        font-size: 16px;
+    }
+}
+
 
 .see_main {
     width: 100%; 
@@ -840,14 +789,12 @@ button {
     padding-top: 8px;
     margin-top: 60px;
 }
-.main_bt .btn {
-    background-color: #ed1c24;
-    border: none;
+.main_bt a {
+    color: #faf9f9;
 }
 
-.main_bt .btn:hover{
+.main_bt a:hover{
     color: #fec108;
-    background-color: #ed1c24;
 }
 
 .ipsum_text_2 {
