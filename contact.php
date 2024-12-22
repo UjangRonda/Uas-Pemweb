@@ -12,7 +12,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="viewport" content="initial-scale=1, maximum-scale=1">
 <!-- site metas -->
-<title>Contact</title>
+<title>Contact | Play Verse</title>
 <meta name="keywords" content="">
 <meta name="description" content="">
 <meta name="author" content="">	
@@ -23,7 +23,7 @@
 <!-- Responsive-->
 <link rel="stylesheet" href="css/responsive.css">
 <!-- fevicon -->
-<link rel="icon" href="images/fevicon.png" type="image/gif" />
+<link rel="icon" href="images/Logo Play Verse.png" type="image/gif" />
 <!-- Scrollbar Custom CSS -->
 <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
 <!-- Tweaks for older IEs-->
@@ -88,22 +88,24 @@
           <div class="email_box">
             <div class="input_main">
               <div class="container">
-                <form action="/action_page.php">
+                <form action="feedback.php" method="POST">
                   <div class="form-group">
-                    <input type="text" class="email-bt" placeholder="Name" name="Name">
+                    <input type="text" class="email-bt" placeholder="Name" name="name">
                   </div>
                   <div class="form-group">
-                    <input type="text" class="email-bt" placeholder="Email" name="Name">
+                    <input type="text" class="email-bt" placeholder="Email" name="email">
                   </div>
                   <div class="form-group">
-                    <input type="text" class="email-bt" placeholder="Phone Numbar" name="Email">
+                    <input type="text" class="email-bt" placeholder="Phone Numbar" name="phone">
                   </div>
                   <div class="form-group">
-                    <textarea class="massage-bt" placeholder="Massage" rows="5" id="comment" name="Massage"></textarea>
+                    <textarea class="massage-bt" placeholder="Massage" rows="5" id="comment" name="message"></textarea>
+                  </div>
+                  <div class="main_bt">
+                    <button type="submit" class="btn btn-primary"> Kirim </button>
                   </div>
                 </form>
               </div>
-              <div class="main_bt"><a href="#">Send Message</a></div>
             </div>
           </div>
         </div>
@@ -136,11 +138,6 @@
           <div class="col-sm-6 col-md-6 col-lg-3">
             <h2 class="account_text">Follow Play Verse</h2>
             <p class="ipsum_text_2">Ikuti Play Verse untuk update terbaru, penawaran menarik, dan nikmati pengalaman gaming yang lebih seru</p>
-          </div>
-          <div class="col-sm-6 col-md-6 col-lg-3">
-            <h2 class="account_text">Newsletter</h2>
-            <input type="" class="email_text" placeholder="Enter Your Email" name="Enter Your Email">
-            <button class="subscribr_bt">SUBSCRIBE</button>
           </div>
         </div>
       </div>

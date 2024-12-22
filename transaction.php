@@ -27,10 +27,12 @@
 <!-- mobile metas -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="viewport" content="initial-scale=1, maximum-scale=1">
-<title>Transaction</title>
+<title>Transaction | Play Verse</title>
 <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="css/styles.css">
 <link rel="stylesheet" href="css/responsive.css">
+<!-- fevicon -->
+<link rel="icon" href="images/Logo Play Verse.png" type="image/gif" />
 <link rel="icon" href="images/fevicon.png" type="image/gif" />
 <link rel="stylesheet" href="css/style-transaction.css">
 </head>
@@ -46,7 +48,7 @@
                 </div>
             </div>
             <div class="col-md-6">
-                <img src="<?php echo htmlspecialchars($product['image']); ?>" alt="Product Image">
+            <img src="images/<?php echo htmlspecialchars($product['image']); ?>" alt="<?php echo htmlspecialchars($product['name']); ?>">
             </div>
         </div>
         <form action="transaction_process.php" method="POST">

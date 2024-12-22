@@ -50,7 +50,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $user = $result_user->fetch_assoc();
 
         // Verifikasi password
-        if (password_verify($password, $user['password'])) {
+        if ($password === $user['password']) {
             $_SESSION['user_id'] = $user['id'];
             $_SESSION['username'] = $user['username'];
             $_SESSION['role'] = 'user';

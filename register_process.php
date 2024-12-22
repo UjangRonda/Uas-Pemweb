@@ -54,11 +54,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // Hash password sebelum disimpan ke database
-    $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+    // $hashed_password = password_hash($password, PASSWORD_DEFAULT);
     
     // Query insert data
     $query = "INSERT INTO users (username, address, password) 
-              VALUES ('$username', '$address', '$hashed_password')";
+              VALUES ('$username', '$address', '$password')";
     
     if (mysqli_query($conn, $query)) {
         session_start();
