@@ -55,7 +55,6 @@ body.dark-mode {
 }
 
 body.dark-mode * {
-    background-color: inherit;
     color: inherit;
     border-color: #333333;
 }
@@ -401,6 +400,10 @@ button {
     height: auto;
     padding-bottom: 200px;
     background-size: cover;
+}
+body.dark-mode .banner_section {
+    background-image: url(../images/banner-bg-dark.png);
+    color: #ffffff;
 }
 .image_1 {
     width: 100%;
