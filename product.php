@@ -103,9 +103,10 @@ include 'koneksi.php';
               <div class="image_2s">
                 <img src="images/<?php echo $row['image']; ?>" alt="<?php echo $row['name']; ?>">
               </div>
-              <div class="price_text">Price $ <span style="color: #3a3a38;"> <?php echo $row['price']; ?> </span></div>
+              
               <h1 class="game_text"> <?php echo $row['name']; ?> </h1>
               <p class="long_text"> <?php echo $row['description']; ?> </p>
+              <div class="prices_text"><span style="color: #3a3a38;"> <?php echo 'Rp.' . number_format($row['price'], 0, ',', '.'); ?> </span></div>
               <div class="buy-button">
                 <?php if (isset($_SESSION['logged_in'])): ?>
                   <a href="transaction.php?product_id=<?php echo $row['id']; ?>" class="btn btn-primary">Buy now</a>
