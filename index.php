@@ -260,7 +260,7 @@
           </div>
         </div>
         <div class="col-md-6">
-          <div class="image_6"><img src="images/email.png"></div>
+          <div class="image_6"><img id="emailImage" src="images/email.png"></div>
         </div>
       </div>
     </div>

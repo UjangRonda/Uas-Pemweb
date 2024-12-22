@@ -16,23 +16,29 @@ $(function () {
 	const toggleButton = document.getElementById('darkModeToggle');
 	console.log(toggleButton);
 	const body = document.body;
+	const emailImage = document.getElementById('emailImage');
 
 	// Check the dark mode status in localStorage
 	if (localStorage.getItem('darkMode') === 'enabled') {
 		body.classList.add('dark-mode');
+		emailImage.src = 'images/email-dark.png';
 	}
 
 	toggleButton.addEventListener('click', function () {
 		console.log('Dark Mode Button clicked');
 		body.classList.toggle('dark-mode');
-
+		console.log('Dark mode status:', body.classList.contains('dark-mode'));
+	
 		// Save the dark mode status in localStorage
 		if (body.classList.contains('dark-mode')) {
 			localStorage.setItem('darkMode', 'enabled');
+			emailImage.src = 'images/email-dark.png';
 		} else {
 			localStorage.setItem('darkMode', 'disabled');
+			emailImage.src = 'images/email.png';
 		}
 	});
+	
 
 	/* JQuery Menu
 	-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- */
