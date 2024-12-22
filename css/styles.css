@@ -49,6 +49,129 @@ body {
      overflow-x: hidden;
 }
 
+body.dark-mode {
+    color: #cccccc;
+    background-color: #121212;
+}
+
+body.dark-mode * {
+    background-color: inherit;
+    color: inherit;
+    border-color: #333333;
+}
+
+.navbar.dark-mode {
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+}
+
+body.dark-mode .navbar .nav-link {
+    color: #bdbdbd;
+}
+
+body.dark-mode .navbar .nav-link:hover {
+    color: #82cfff;
+}
+
+body.dark-mode .section_footer {
+    background-color: #181818;
+    color: #bdbdbd;
+}
+
+body.dark-mode .section_footer a {
+    color: #82cfff;
+}
+
+body.dark-mode .product_card {
+    background-color: #1e1e1e;
+    border: 1px solid #333333;
+    color: #e0e0e0;
+}
+
+body.dark-mode .testimonial_section {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+}
+
+body.dark-mode input,
+body.dark-mode textarea {
+    background-color: #262626;
+    color: #ffffff;
+    border: 1px solid #444444;
+}
+
+body.dark-mode input::placeholder,
+body.dark-mode textarea::placeholder {
+    color: #b0b0b0;
+}
+
+body.dark-mode h1, 
+body.dark-mode h2, 
+body.dark-mode h3, 
+body.dark-mode h4, 
+body.dark-mode h5, 
+body.dark-mode h6 {
+    color: #ffffff;
+}
+
+body.dark-mode p {
+    color: #bdbdbd;
+}
+
+body.dark-mode a {
+    color: #4f9dff;
+}
+
+body.dark-mode a:hover {
+    color: #82cfff;
+}
+
+body.dark-mode .btn {
+    background-color: #333333;
+    color: #ffffff;
+    border: 1px solid #444444;
+}
+
+body.dark-mode .btn:hover {
+    background-color: #444444;
+}
+
+body.dark-mode .banner_section {
+    background-color: #1a1a1a;
+    color: #ffffff;
+}
+
+body.dark-mode .shop_bt {
+    background-image: linear-gradient(to right, #444444, #555555, #666666);
+}
+
+body.dark-mode .shop_bt:hover {
+    background-image: linear-gradient(to right, #666666, #555555, #444444);
+}
+
+body.dark-mode .about_section {
+    background-color: #1a1a1a;
+    color: #ffffff;
+}
+
+body.dark-mode .video_section {
+    background-color: #1a1a1a;
+    color: #ffffff;
+}
+
+body.dark-mode .contact_section {
+    background-color: #1c1c1c;
+    color: #cccccc;
+}
+
+body.dark-mode .social_icon li a {
+    color: #cccccc;
+}
+
+body.dark-mode .social_icon li a:hover {
+    color: #4f9dff;
+}
+
 a {
      color: #1f1f1f;
      text-decoration: none !important;
@@ -451,12 +574,12 @@ button {
     border: 2px solid #3371e2; 
     border-radius: 10px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    width: auto;
-    box-sizing: border-box;
-    max-height: 400px; 
-    overflow: hidden; 
-    display: flex;
-    flex-direction: column; 
+    width: 100%; /* Pastikan kartu mengambil lebar penuh dalam kolom */
+    max-height: 450px; /* Batas tinggi maksimum */
+    display: flex; /* Gunakan Flexbox */
+    flex-direction: column; /* Susun elemen secara vertikal */
+    justify-content: space-between; /* Pastikan elemen terdistribusi dengan baik */
+    text-align: left; /* Teks rata kiri */
 }
   
 .product_card:hover {
@@ -486,10 +609,12 @@ button {
 .product_card .long_text {
     font-size: 14px;
     color: #000000;
-    margin-top: 5px;
-    max-height: 40px; 
-    overflow: hidden; 
-    text-overflow: ellipsis; 
+    margin-top: 10px; /* Tambahkan jarak atas untuk pemisahan */
+    max-height: 60px; /* Batasi tinggi deskripsi */
+    overflow: hidden; /* Sembunyikan teks yang melebihi batas */
+    text-overflow: ellipsis; /* Tambahkan tanda titik-titik jika teks terlalu panjang */
+    white-space: normal; /* Pastikan teks membungkus ke baris baru */
+    line-height: 1.5; /* Sesuaikan jarak antar baris */
 }
   
 .product_text {
