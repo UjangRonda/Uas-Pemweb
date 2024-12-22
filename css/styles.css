@@ -562,6 +562,7 @@ body.dark-mode .banner_section {
     color: #ffffff;
 }
 
+<<<<<<< HEAD
 .product_section{
     width: 100%;
     float: left;
@@ -638,7 +639,132 @@ body.dark-mode .banner_section {
     color: #000000;
     margin-left: 50px;
     text-align: center;
+=======
+/* Product Section */
+
+.product_section {
+    width: 100%;
+    padding: 50px 0; /* Tambahkan padding atas dan bawah */
 }
+
+.product_text {
+    color: #3371e2;
+    font-size: 50px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 20px; /* Jarak dengan deskripsi */
+}
+
+.long_text1 {
+    text-align: center;
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 40px; /* Tambahkan jarak dengan card */
+}
+
+.product_section_2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 10px;
+}
+
+.product_card {
+    flex: 1 1 calc(33.333% - 30px); /* Card memiliki lebar 1/3 */
+    padding: 15px;
+    border: 2px solid #3371e2;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-height: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Pusatkan konten */
+    text-align: center;
+}
+
+.product_card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.product_card .image_2 img {
+    width: 100%;
+    height: 130%;
+    aspect-ratio: 16/9; /* Menjaga rasio gambar */
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px; /* Jarak ke bawah */
+    position: relative; /* Untuk memungkinkan z-index */
+    top: -30px; /* Geser gambar ke atas */
+    z-index: 1; /* Pastikan gambar berada di atas card */
+}
+
+.product_card .image_2 {
+    width: 100%;
+    position: relative;
+    top: -20px; /* Angkat container gambar */
+    z-index: 1;
+}
+
+.game_text {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 20px 0 10px; /* Tambahkan margin atas untuk menggeser ke bawah */
+    text-align: center; /* (Opsional) Jika ingin tetap di tengah */
+    color: #333;
+}
+
+.long_text {
+    font-size: 14px;
+    color: #666;
+    margin-top: 5px;
+}
+
+.see_main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.see_bt a {
+    text-decoration: none;
+    padding: 10px 30px;
+    font-size: 18px;
+    background: linear-gradient(to right, #7325ee, #3371e2, #00c2cb);
+    color: white;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+>>>>>>> 645b6d6a9d3ee04a80e5ee4c8eefbe2bc7846f3b
+}
+
+.see_bt a:hover {
+    background: linear-gradient(to right, #00c2cb, #3371e2, #7325ee);
+    transform: scale(1.03);
+}
+
+/* Media Query for Responsiveness */
+@media (max-width: 768px) {
+    .product_card {
+        flex: 1 1 calc(50% - 20px); /* Card menjadi 2 kolom */
+    }
+}
+
+@media (max-width: 480px) {
+    .product_card {
+        flex: 1 1 100%; /* Card menjadi 1 kolom */
+    }
+
+    .product_text {
+        font-size: 36px; /* Sesuaikan ukuran font */
+    }
+
+    .long_text1 {
+        font-size: 16px;
+    }
+}
+
 
 .see_main {
     width: 100%; 
