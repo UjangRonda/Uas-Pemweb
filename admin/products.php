@@ -319,7 +319,7 @@ $showrfModule = true;
 
                                     <h2>4. Cek Kembali</h2>
                                     <p>Sebelum menjalankan skrip, pastikan file sudah berada di lokasi yang benar. Dengan mengikuti panduan ini, skrip PHP akan dapat membaca dan memproses file <code>produk.txt</code> untuk mengimpor data ke dalam database.</p>
-                                    <a href="localhost/Pemwebs/admin/readfile.php">
+                                    <a href="readfile.php">
                                         <button id="readfile" class="btn btn-primary mt-3">Import Now</button>
                                     </a>
                                 </div>

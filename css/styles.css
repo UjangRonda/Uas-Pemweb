@@ -515,6 +515,9 @@ body.dark-mode .banner_section {
     float: left;
     padding-top: 50px;
     height: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .about_text{
