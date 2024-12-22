@@ -118,6 +118,32 @@ if ($tipe == 'users'){
         echo "Data tidak lengkap!";
     }
 }else if ($tipe == 'transactions'){
+    if (isset($_POST['transaction_id']) && isset($_POST['shipping_address']) && isset($_POST['status'])) {
+        $transaction_id = $_POST['transaction_id'];
+        $shipping_address = $_POST['shipping_address'];
+        $status = $_POST['status'];
+        $errors = array();
+    
+        // Validasi username
+        if(empty($shipping_address)) {
+        $errors[] = "Address tidak boleh kosong!";
+    }
+    // Jika ada error, kembalikan ke halaman register
+    if(!empty($errors)) {
+        $error_message = implode('\n', $errors);
+        echo "<script>alert('$error_message');  window.location.href='edit_products.php?type=products&id={$id}';</script>";
+        exit();
+    }
 
+        $query = "UPDATE transactions SET shipping_address = '$shipping_address',  status = '$status' WHERE transaction_id = $transaction_id";
+    
+        if (mysqli_query($conn, $query)) {
+            echo "<script>alert('Data berhasil diperbarui!'); window.location.href='transactions.php';</script>";
+        } else {
+            echo "Error: " . mysqli_error($conn);
+        }
+    } else {
+        echo "Data tidak lengkap!";
+    }
 }
 ?>

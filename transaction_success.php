@@ -20,18 +20,18 @@ if (!$transaction) {
     exit();
 }
 
-function getStatus($status) {
-    switch($status) {
-        case 1:
-            return "Pending";
-        case 2:
-            return "Processing";
-        case 3:
-            return "Completed";
-        default:
-            return "Unknown";
-    }
-}
+// function getStatus($status) {
+//     switch($status) {
+//         case 1:
+//             return "Pending";
+//         case 2:
+//             return "Processing";
+//         case 3:
+//             return "Completed";
+//         default:
+//             return "Unknown";
+//     }
+// }
 ?>
 
 <!DOCTYPE html>
@@ -92,7 +92,7 @@ function getStatus($status) {
             <p>Product: <?php echo htmlspecialchars($transaction['product_name']); ?></p>
             <p>Amount: $<?php echo htmlspecialchars($transaction['price']); ?></p>
             <p>Shipping Address: <?php echo htmlspecialchars($transaction['shipping_address']); ?></p>
-            <p>Status: <?php echo getStatus($transaction['status']); ?></p>
+            <p>Status: <?php echo htmlspecialchars($transaction['status']); ?></p>
             <p>Date: <?php echo date('F j, Y', strtotime($transaction['transaction_date'])); ?></p>
         </div>
         <div class="text-center">

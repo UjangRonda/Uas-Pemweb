@@ -12,6 +12,7 @@ if (isset($_SESSION['user_id'])) {
 $product_id = $_POST['product_id'];
 $shipping_address = $_POST['shipping_address'];
 $transaction_date = date("Y-m-d");
+$status = $_POST['pending'];
 
 $query = "INSERT INTO transactions (user_id, product_id, shipping_address, transaction_date, status) 
           VALUES (?, ?, ?, ?, ?)";

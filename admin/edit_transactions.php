@@ -6,7 +6,7 @@ if (isset($_GET['id'])) {
   $id = $_GET['id'];
 
   // Query untuk mendapatkan data berdasarkan ID
-  $query = "SELECT * FROM products WHERE id = $id";
+  $query = "SELECT * FROM transactions WHERE transaction_id = $id";
   $result = mysqli_query($conn, $query);
 
   if (mysqli_num_rows($result) > 0) {
@@ -104,7 +104,7 @@ if (isset($_GET['id'])) {
             <a class="nav-link" href="../admin_dashboard.php">Dashboard</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="users.php">Manage Users</a>
+            <a class="nav-link" href="users.php">Manage Transactions</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="../logout.php">LOGOUT</a>
@@ -120,42 +120,29 @@ if (isset($_GET['id'])) {
     <div class="container">
       <div class="edit_section_2">
         <div class="edit_text">Edit <span style="color: #5ca0e9;">User</span></div>
-        <form action="update.php?type=products" method="POST">
-          <input type="hidden" name="id" value="<?php echo htmlspecialchars($row['id']); ?>">
+        <form action="update.php?type=transactions" method="POST">
+          <input type="hidden" name="transaction_id" value="<?php echo htmlspecialchars($row['transaction_id']); ?>">
 
           <div class="form-group">
-            <label for="name">Products Name</label>
-            <input type="text" class="form-control" id="name" name="name"
-              value="<?php echo htmlspecialchars($row['name']); ?>" required>
+            <label for="name">Shipping Address</label>
+            <input type="text" class="form-control" id="shipping_address" name="shipping_address"
+              value="<?php echo htmlspecialchars($row['shipping_address']); ?>" required>
             <div id="username-message" class="invalid-feedback"></div>
           </div>
 
           <div class="form-group">
-            <label for="description">Description</label>
-            <textarea class="form-control" id="description" name="description" rows="4" required>
-<?php echo htmlspecialchars(trim($row['description']));?></textarea>
-            <div id="description-message" class="invalid-feedback"></div>
-          </div>
-
-
-          <div class="form-group">
-            <label for="price">Price</label>
-            <input type="text" class="form-control" id="price" name="price"
-              value="<?php echo htmlspecialchars($row['price']); ?>" required>
-            <div id="price-message" class="invalid-feedback"></div>
-          </div>
-
-          <div class="form-group">
-            <label for="image">Image</label>
-            <input type="text" class="form-control" id="image" name="image"
-              value="<?php echo htmlspecialchars($row['image']); ?>" required>
-            <div id="image-message" class="invalid-feedback"></div>
+            <label for="status">Status</label>
+            <select class="form-control" id="status" name="status" required>
+              <option value="pending" <?php if ($row['status'] == 'pending') echo 'selected'; ?>>Pending</option>
+              <option value="success" <?php if ($row['status'] == 'success') echo 'selected'; ?>>Success</option>
+              <option value="canceled" <?php if ($row['status'] == 'canceled') echo 'selected'; ?>>Canceled</option>
+            </select>
           </div>
 
 
           <div class="button-container">
-            <a href="products.php" class="btn btn-secondary">Cancel</a>
-            <button type="submit" class="btn btn-primary">Update User</button>
+            <a href="transactions.php" class="btn btn-secondary">Cancel</a>
+            <button type="submit" class="btn btn-primary">Update Transaction</button>
           </div>
         </form>
       </div>
