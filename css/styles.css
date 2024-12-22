@@ -432,84 +432,55 @@ button {
     color: #ffffff;
 }
 
-.product_section{
-    width: 100%;
-    float: left;
-}
-
-.product_section_2 {
-    width: 100%;
-    display: flex; 
-    flex-wrap: wrap; 
-    gap: 15px; 
-    padding: 10px;
-    box-sizing: border-box;
-}
-  
 .product_card {
-    padding: 10px; 
+    padding: 15px; 
     border: 2px solid #3371e2; 
     border-radius: 10px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    width: auto;
+    width: 100%; 
     box-sizing: border-box;
-    max-height: 400px; 
-    overflow: hidden; 
+    height: auto; 
     display: flex;
     flex-direction: column; 
+    align-items: center; 
+    justify-content: space-between; 
 }
-  
-.product_card:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); 
-}
-  
+
 .product_card .image_2 img {
     width: 100%;
-    height: 150px; 
+    height: 200px; 
     object-fit: cover; 
     border-radius: 8px;
 }
-  
+
 .product_card .game_text {
-    font-size: 16px;
+    font-size: 18px; 
     font-weight: bold;
-    margin: 10px 0;
     text-align: center;
-  }
-  
+}
+
 .product_card .long_text {
     font-size: 14px;
     color: #000000;
-    margin-top: 5px;
-    max-height: 40px; 
-    overflow: hidden; 
-    text-overflow: ellipsis; 
+    margin-top: 10px;
+    text-align: center; 
+    max-height: none; 
+    overflow: visible; 
 }
-  
-.product_text {
-    width: 100%;
-    float: left;
-    color: #3371e2;
-    font-size: 50px;
-    font-weight: 600;
-    text-align: center;
+
+.product_section_2 {
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 20px; 
+    justify-content: center; 
+    padding: 20px;
 }
-  
-.long_text{
-    width: 90%;
-    float: left;
+
+.long_text1 {
+    width: 100%; 
     font-size: 16px;
     color: #000000;
-    margin-left: 50px;
-    text-align: center;
-}
-.long_text1{
-    width: 90%;
-    float: left;
-    font-size: 16px;
-    color: #000000;
-    margin-left: 50px;
+    margin: 10px 0;
     text-align: center;
 }
 
