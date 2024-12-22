@@ -1,0 +1,2 @@
+Produk A, Deskripsi Produk A, 100000, produk_a.jpg
+Produk B, Deskripsi Produk B, 200000, produk_b.jpg

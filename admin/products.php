@@ -10,6 +10,7 @@ $query = "SELECT * FROM products";
 $result = mysqli_query($conn, $query);
 
 $showModule = true;
+$showrfModule = true;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -30,6 +31,10 @@ $showModule = true;
 
     <style>
         #module {
+            display: none;
+        }
+
+        #rfmodule {
             display: none;
         }
 
@@ -86,6 +91,7 @@ $showModule = true;
             text-align: center;
             transition: 0.3s ease;
         }
+
         .btn-icon {
             font-size: 10px;
             border-radius: 5px;
@@ -95,14 +101,17 @@ $showModule = true;
             text-align: center;
             transition: 0.3s ease;
         }
-        .btn-icon.delete{
+
+        .btn-icon.delete {
             background-color: #e74c3c;
         }
-        .btn-icon:hover{
+
+        .btn-icon:hover {
             color: white;
             background-color: orange;
         }
-        .btn-icon.delete:hover{
+
+        .btn-icon.delete:hover {
             background-color: #c0392b;
         }
 
@@ -117,6 +126,7 @@ $showModule = true;
         .btn.delete:hover {
             background-color: #c0392b;
         }
+
         .dataTable th,
         .dataTable td {
             border: 1px solid #ddd;
@@ -169,6 +179,13 @@ $showModule = true;
             border: 1px solid #ddd;
             border-radius: 4px;
             padding: 0.375rem 0.75rem;
+        }
+        code {
+            background-color: #f4f4f4;
+            padding: 5px;
+            display: block;
+            margin: 10px 0;
+            border-left: 3px solid #3498db;
         }
 
         .dataTables_wrapper .dataTables_paginate .paginate_button.current {
@@ -224,6 +241,7 @@ $showModule = true;
                 <div class="content-area">
                     <h2 class="">Manage Products</h2>
                     <button id="toggleBtn" class="btn btn-primary mt-3">Add</button>
+                    <button id="readfile" class="btn btn-primary mt-3">Batch Add</button>
                     <?php if ($showModule): ?>
                         <div id="module" class="mt-3">
                             <div class="card">
@@ -266,6 +284,44 @@ $showModule = true;
                                         </div>
                                     </div>
 
+                                </div>
+                            </div>
+                        </div>
+                    <?php endif; ?>
+                    <?php if ($showrfModule): ?>
+                        <div id="rfmodule" class="mt-3">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h1>Panduan Menyimpan File Produk untuk Impor Data</h1>
+
+                                    <p>Ikuti langkah-langkah di bawah ini untuk memastikan file <strong>produk.txt</strong> disimpan dengan benar dan dapat diimpor ke dalam database menggunakan skrip PHP.</p>
+                                    <h2>1. Siapkan File Produk</h2>
+                                    <p>Buat file teks baru dengan nama <strong>produk.txt</strong>. File ini akan digunakan untuk menyimpan daftar produk yang nantinya diimpor ke database.</p>
+
+                                    <h2>2. Format Isi File</h2>
+                                    <p>Setiap baris dalam file <code>produk.txt</code> harus mengikuti format berikut:</p>
+                                    <code>nama_produk, deskripsi_produk, harga, nama_file_gambar</code>
+
+                                    <p><strong>Contoh isi file:</strong></p>
+                                    <code>
+                                        Laptop Gaming, Laptop performa tinggi untuk gaming, 15000000, laptop1.jpg<br>
+                                        Headset Wireless, Headset tanpa kabel dengan suara jernih, 750000, headset2.jpg<br>
+                                        Mouse RGB, Mouse gaming dengan lampu RGB, 250000, mouse3.jpg
+                                    </code>
+
+                                    <h2>3. Penyimpanan File</h2>
+                                    <p>Setelah Anda membuat dan mengisi file <code>produk.txt</code>, pindahkan atau salin file tersebut ke dalam folder <code>datafile</code> yang telah dibuat.</p>
+
+                                    <div class="note">
+                                        <strong>Catatan:</strong> Pastikan path file sesuai, seperti berikut:<br>
+                                        <code>datafile/produk.txt</code>
+                                    </div>
+
+                                    <h2>4. Cek Kembali</h2>
+                                    <p>Sebelum menjalankan skrip, pastikan file sudah berada di lokasi yang benar. Dengan mengikuti panduan ini, skrip PHP akan dapat membaca dan memproses file <code>produk.txt</code> untuk mengimpor data ke dalam database.</p>
+                                    <a href="localhost/Pemwebs/admin/readfile.php">
+                                        <button id="readfile" class="btn btn-primary mt-3">Import Now</button>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -343,12 +399,20 @@ $showModule = true;
             });
         });
     </script>
-    <script>
-        $(document).ready(function() {
-            $('#toggleBtn').click(function() {
-                $('#module').toggle();
-            });
+<script>
+    $(document).ready(function() {
+        $('#toggleBtn').click(function() {
+            $('#module').toggle();
+            $('#rfmodule').hide();
         });
+
+        $('#readfile').click(function() {
+            $('#rfmodule').toggle();
+            $('#module').hide();
+        });
+    });
+</script>
+
     </script>
 </body>
 
