@@ -562,84 +562,6 @@ body.dark-mode .banner_section {
     color: #ffffff;
 }
 
-<<<<<<< HEAD
-.product_section{
-    width: 100%;
-    float: left;
-}
-
-.product_section_2 {
-    width: 100%;
-    display: flex; 
-    flex-wrap: wrap; 
-    gap: 15px; 
-    padding: 10px;
-    box-sizing: border-box;
-}
-  
-.product_card {
-    padding: 10px; 
-    border: 2px solid #3371e2; 
-    border-radius: 10px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    width: auto;
-    box-sizing: border-box;
-    max-height: 400px; 
-    overflow: hidden; 
-    display: flex;
-    flex-direction: column; 
-}
-  
-.product_card:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); 
-}
-  
-.product_card .image_2 img {
-    width: 100%;
-    height: auto;
-    object-fit: cover; /* Pastikan gambar sesuai dengan ukuran */
-    border-radius: 8px;
-}
-  
-.prices_text {
-    font-size: 32px;
-    color: #3371e2;
-    margin: 10px 0 0 0;
-}
-  
-.product_card .game_text {
-    font-size: 16px;
-    font-weight: bold;
-    margin: 10px 0;
-  }
-  
-.product_card .long_text {
-    font-size: 14px;
-    color: #000000;
-    margin-top: 5px;
-    max-height: 40px; 
-    overflow: hidden; 
-    text-overflow: ellipsis; 
-}
-  
-.product_text {
-    width: 100%;
-    float: left;
-    color: #3371e2;
-    font-size: 50px;
-    font-weight: 600;
-    text-align: center;
-}
-  
-.long_text{
-    width: 90%;
-    float: left;
-    font-size: 16px;
-    color: #000000;
-    margin-left: 50px;
-    text-align: center;
-=======
 /* Product Section */
 
 .product_section {
@@ -736,7 +658,6 @@ body.dark-mode .banner_section {
     color: white;
     border-radius: 30px;
     transition: all 0.3s ease;
->>>>>>> 645b6d6a9d3ee04a80e5ee4c8eefbe2bc7846f3b
 }
 
 .see_bt a:hover {
@@ -982,6 +903,10 @@ body.dark-mode .banner_section {
     width: 100%;
     margin: 0 auto;
     text-align: center;
+}
+.btn_kirim{
+    background-color: #ed1c24;
+    font-size: 18px;
 }
 
 .main_bt {

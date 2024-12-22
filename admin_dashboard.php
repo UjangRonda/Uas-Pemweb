@@ -42,9 +42,39 @@ while ($row = mysqli_fetch_assoc($result_chart)) {
   <link rel="stylesheet" href="css/responsive.css">
   <link rel="icon" href="images/Logo Play Verse.png" type="image/gif" />
   <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
   <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
 
   <style>
+    #feedbackModule {
+      right: 20px;
+      z-index: 20;
+      position: absolute;
+      display: none;
+      width: 100%;
+      max-width: 600px;
+      max-height: 500px;
+      overflow-y: auto;
+      padding: 20px;
+      background: #f0f0f0;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+    }
+
+    #notificationBtn {
+      background-color: rgba(92, 160, 233, 1);
+      color: white;
+      border: none;
+      border-radius: 50%;
+      padding: 10px 15px 10px 15px;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    #notificationBtn:hover {
+      background-color: rgba(92, 190, 233, 1);
+    }
+
     .dashboard-container {
       padding: 2rem;
       background: #f8f9fa;
@@ -121,6 +151,13 @@ while ($row = mysqli_fetch_assoc($result_chart)) {
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto">
+        <li>
+            <button id="notificationBtn"><i class="fas fa-bell"></i></button>
+            <div id="feedbackModule">
+              <h3>Feedback</h3>
+              <div id="feedbackContent"></div>
+            </div>
+          </li>
           <li class="nav-item">
             <a class="nav-link">Welcome, Admin <?php echo htmlspecialchars($_SESSION['username']); ?></a>
           </li>
@@ -199,6 +236,7 @@ while ($row = mysqli_fetch_assoc($result_chart)) {
   <script src="js/popper.min.js"></script>
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/jquery-3.0.0.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="js/plugin.js"></script>
   <script src="js/custom.js"></script>
   <script>
@@ -237,6 +275,26 @@ while ($row = mysqli_fetch_assoc($result_chart)) {
       }
     });
   </script>
+  <script>
+    $(document).ready(function() {
+        $('#notificationBtn').click(function() {
+            $('#feedbackModule').toggle();
+
+            if ($('#feedbackModule').is(':visible')) {
+                $.ajax({
+                    url: 'admin/get_feedback.php',
+                    method: 'GET',
+                    success: function(response) {
+                        $('#feedbackContent').html(response);
+                    },
+                    error: function() {
+                        $('#feedbackContent').html('<p>Terjadi kesalahan saat memuat data.</p>');
+                    }
+                });
+            }
+        });
+    });
+</script>
 
 </body>
 

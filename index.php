@@ -251,7 +251,7 @@
                     <textarea class="massage-bt" placeholder="Massage" rows="5" id="comment" name="message"></textarea>
                   </div>
                   <div class="main_bt">
-                    <button type="submit" class="btn btn-primary"> Kirim </button>
+                    <button type="submit" class="btn_kirim"> Kirim </button>
                   </div>
                 </form>
               </div>
