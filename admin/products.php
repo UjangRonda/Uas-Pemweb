@@ -6,7 +6,7 @@ if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true || $_SESSI
     header("Location: login.php");
     exit();
 }
-$query = "SELECT * FROM users";
+$query = "SELECT * FROM products";
 $result = mysqli_query($conn, $query);
 
 $showModule = true;
@@ -203,7 +203,7 @@ $showModule = true;
             <!-- Main Content -->
             <div class="col-md-9">
                 <div class="content-area">
-                    <h2 class="">Manage Users</h2>
+                    <h2 class="">Manage Products</h2>
                     <button id="toggleBtn" class="btn btn-primary mt-3">Add</button>
                     <?php if ($showModule): ?>
                         <div id="module" class="mt-3">
@@ -212,31 +212,32 @@ $showModule = true;
                                     <div class="register_section">
                                         <div class="container">
                                             <div class="register_section_2">
-                                                <form action="create.php?type=users" method="POST">
+                                                <form action="create.php?type=products" method="POST">
                                                     <div class="row">
                                                         <div class="col-md-12">
-                                                            <label for="username">Username</label>
-                                                            <input type="text" class="form-control" id="username" name="username" required>
+                                                            <label for="name">Product Name</label>
+                                                            <input type="text" class="form-control" id="name" name="name" required>
                                                         </div>
                                                         <!-- <div class="col-md-12">
               <label for="email">Email</label>
               <input type="email" class="form-control" id="email" name="email" required>
             </div> -->
                                                         <div class="col-md-12">
-                                                            <label for="address">Shipping Address</label>
-                                                            <input type="text" class="form-control" id="address" name="address" required>
+                                                            <label for="desc">Description</label>
+                                                            <textarea class="form-control" id="desc" name="desc" rows="4" required></textarea>
+                                                        </div>
+
+                                                        <div class="col-md-12">
+                                                            <label for="price">Price</label>
+                                                            <input type="text" class="form-control" id="price" name="price" required>
                                                         </div>
                                                         <div class="col-md-12">
-                                                            <label for="password">Password</label>
-                                                            <input type="password" class="form-control" id="password" name="password" required>
-                                                        </div>
-                                                        <div class="col-md-12">
-                                                            <label for="confirm_password">Confirm Password</label>
-                                                            <input type="password" class="form-control" id="confirm_password" name="confirm_password" required>
+                                                            <label for="image">Image</label>
+                                                            <input type="text" class="form-control" id="image" name="image" required>
                                                         </div>
                                                         <div class="col-md-12">
                                                             <div class="button-container">
-                                                                <a href="users.php" class="btn btn-secondary">Kembali</a>
+                                                                <a href="index.php" class="btn btn-secondary">Kembali</a>
                                                                 <button type="submit" class="btn btn-primary">Tambahkan</button>
                                                             </div>
                                                         </div>
@@ -255,9 +256,10 @@ $showModule = true;
                             <thead>
                                 <tr>
                                     <th>ID</th>
-                                    <th>Username</th>
-                                    <th>Address</th>
-                                    <th>Password</th>
+                                    <th>Product Name</th>
+                                    <th>Description</th>
+                                    <th>Price</th>
+                                    <th>Image</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>
@@ -265,12 +267,13 @@ $showModule = true;
                                 <?php while ($row = mysqli_fetch_assoc($result)): ?>
                                     <tr>
                                         <td><?= htmlspecialchars($row['id']); ?></td>
-                                        <td><?= htmlspecialchars($row['username']); ?></td>
-                                        <td><?= htmlspecialchars($row['address']); ?></td>
-                                        <td><?= htmlspecialchars($row['password']); ?></td>
+                                        <td><?= htmlspecialchars($row['name']); ?></td>
+                                        <td><?= htmlspecialchars($row['description']); ?></td>
+                                        <td><?= 'Rp.' . number_format($row['price'], 0, ',', '.'); ?></td>
+                                        <td><?= htmlspecialchars($row['image']); ?></td>
                                         <td>
-                                            <a href="edit.php?type=users&id=<?= $row['id']; ?>" class="btn ">Edit</a>
-                                            <a href="delete.php?type=users&id=<?= $row['id']; ?>" class="btn delete" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')">Delete</a>
+                                            <a href="edit_products.php?type=products&id=<?= $row['id']; ?>" class="btn ">Edit</a>
+                                            <a href="delete.php?type=products&id=<?= $row['id']; ?>" class="btn delete" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')">Delete</a>
                                         </td>
                                     </tr>
                                 <?php endwhile; ?>
@@ -315,8 +318,8 @@ $showModule = true;
                 responsive: true,
                 pageLength: 10,
                 language: {
-                    search: "Search users:",
-                    lengthMenu: "Show _MENU_ users per page",
+                    search: "Search products:",
+                    lengthMenu: "Show _MENU_ products per page",
                 }
             });
         });
@@ -325,102 +328,6 @@ $showModule = true;
         $(document).ready(function() {
             $('#toggleBtn').click(function() {
                 $('#module').toggle();
-            });
-        });
-    </script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const username = document.getElementById('username');
-            const address = document.getElementById('address');
-            const password = document.getElementById('password');
-            const confirm_password = document.getElementById('confirm_password');
-
-            // Validasi Username
-            username.addEventListener('input', function() {
-                if (this.value.length >= 4) {
-                    this.classList.remove('is-invalid');
-                    this.classList.add('is-valid');
-                } else {
-                    this.classList.remove('is-valid');
-                    this.classList.add('is-invalid');
-                }
-            });
-
-            // Validasi Address
-            address.addEventListener('input', function() {
-                if (this.value.length >= 10) {
-                    this.classList.remove('is-invalid');
-                    this.classList.add('is-valid');
-                } else {
-                    this.classList.remove('is-valid');
-                    this.classList.add('is-invalid');
-                }
-            });
-
-            // Tambahkan tooltip untuk password
-            const passwordField = document.getElementById('password');
-            const tooltip = document.createElement('div');
-            tooltip.className = 'password-tooltip';
-            tooltip.innerHTML = 'Password harus memenuhi kriteria:<br>- Minimal 8 karakter<br>- Minimal 1 huruf besar<br>- Minimal 1 huruf kecil<br>- Minimal 1 angka';
-            passwordField.parentElement.appendChild(tooltip);
-
-            // Tampilkan tooltip saat password field difokuskan
-            passwordField.addEventListener('focus', function() {
-                tooltip.style.display = 'block';
-            });
-
-            // Sembunyikan tooltip saat password field kehilangan fokus
-            passwordField.addEventListener('blur', function() {
-                tooltip.style.display = 'none';
-            });
-
-            // Validasi Password
-            password.addEventListener('input', function() {
-                const regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/;
-                if (regex.test(this.value)) {
-                    this.classList.remove('is-invalid');
-                    this.classList.add('is-valid');
-                } else {
-                    this.classList.remove('is-valid');
-                    this.classList.add('is-invalid');
-                }
-
-                if (confirm_password.value) {
-                    confirm_password.dispatchEvent(new Event('input'));
-                }
-            });
-
-            // Validasi Confirm Password
-            confirm_password.addEventListener('input', function() {
-                if (this.value === password.value && this.value !== '') {
-                    this.classList.remove('is-invalid');
-                    this.classList.add('is-valid');
-                } else {
-                    this.classList.remove('is-valid');
-                    this.classList.add('is-invalid');
-                }
-            });
-
-            // Validasi form submit
-            document.querySelector('form').addEventListener('submit', function(e) {
-                const inputs = [username, address, password, confirm_password];
-                let isValid = true;
-
-                inputs.forEach(input => {
-                    if (input.classList.contains('is-invalid') || !input.value) {
-                        isValid = false;
-                        input.classList.add('is-invalid');
-                    }
-                });
-
-                if (!document.getElementById('agree').checked) {
-                    isValid = false;
-                    alert('Anda harus menyetujui syarat dan ketentuan!');
-                }
-
-                if (!isValid) {
-                    e.preventDefault();
-                }
             });
         });
     </script>
