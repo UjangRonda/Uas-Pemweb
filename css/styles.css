@@ -171,6 +171,10 @@ body.dark-mode .social_icon li a:hover {
     color: #4f9dff;
 }
 
+body.dark-mode .product_card .long_text {
+    color: #e0e0e0; /* Ubah warna teks menjadi putih keabuan */
+}
+
 a {
      color: #1f1f1f;
      text-decoration: none !important;
@@ -558,6 +562,7 @@ body.dark-mode .banner_section {
     color: #ffffff;
 }
 
+<<<<<<< HEAD
 .product_card {
     padding: 15px; 
     border: 2px solid #3371e2; 
@@ -593,21 +598,83 @@ body.dark-mode .banner_section {
     text-overflow: ellipsis; /* Tambahkan tanda titik-titik jika teks terlalu panjang */
     white-space: normal; /* Pastikan teks membungkus ke baris baru */
     line-height: 1.5; /* Sesuaikan jarak antar baris */
+=======
+.product_section{
+    width: 100%;
+    float: left;
+>>>>>>> af9e14f4f2b3c22b192b9d2cd9d180431861af20
 }
 
 .product_section_2 {
+    width: 100%;
     display: flex; 
     flex-wrap: wrap; 
-    gap: 20px; 
-    justify-content: center; 
-    padding: 20px;
+    gap: 15px; 
+    padding: 10px;
+    box-sizing: border-box;
 }
-
-.long_text1 {
-    width: 100%; 
+  
+.product_card {
+    padding: 10px; 
+    border: 2px solid #3371e2; 
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: auto;
+    box-sizing: border-box;
+    max-height: 400px; 
+    overflow: hidden; 
+    display: flex;
+    flex-direction: column; 
+}
+  
+.product_card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); 
+}
+  
+.product_card .image_2 img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Pastikan gambar sesuai dengan ukuran */
+    border-radius: 8px;
+}
+  
+.product_card .price_text {
+    font-size: 16px;
+    color: #3371e2;
+    margin: 10px 0 0 0;
+}
+  
+.product_card .game_text {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 10px 0;
+  }
+  
+.product_card .long_text {
+    font-size: 14px;
+    color: #000000;
+    margin-top: 5px;
+    max-height: 40px; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+}
+  
+.product_text {
+    width: 100%;
+    float: left;
+    color: #3371e2;
+    font-size: 50px;
+    font-weight: 600;
+    text-align: center;
+}
+  
+.long_text{
+    width: 90%;
+    float: left;
     font-size: 16px;
     color: #000000;
-    margin: 10px 0;
+    margin-left: 50px;
     text-align: center;
 }
 
@@ -843,14 +910,12 @@ body.dark-mode .banner_section {
     padding-top: 8px;
     margin-top: 60px;
 }
-.main_bt .btn {
-    background-color: #ed1c24;
-    border: none;
+.main_bt a {
+    color: #faf9f9;
 }
 
-.main_bt .btn:hover{
+.main_bt a:hover{
     color: #fec108;
-    background-color: #ed1c24;
 }
 
 .ipsum_text_2 {
